@@ -59,3 +59,7 @@
   .t-dropdown, .t-stagger-line, .t-acc-panel, .t-acc-panel-inner, .t-acc-chevron, .t-learn-chevron, .t-learn-arm { transition: none !important; }
   .js .t-stagger .t-stagger-line { opacity: 1; transform: none; filter: none; }
 }
+
+/* 21 · closed panels are hidden from layout checks and screen readers once the collapse finishes */
+.t-acc:not([data-open="true"]) .t-acc-panel-inner { visibility: hidden; transition: opacity var(--acc-collapse) var(--acc-ease), filter var(--acc-collapse) var(--acc-ease), visibility 0s linear var(--acc-collapse); }
+.t-acc[data-open="true"] .t-acc-panel-inner { visibility: visible; }
