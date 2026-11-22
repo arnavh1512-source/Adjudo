@@ -40,4 +40,4 @@
 .page-hero + .pr-sec { padding-top: var(--space-xl); }
 .pr-faq h2, .pr-close h2 { text-wrap: balance; }
 .pr-plan__foot .btn:focus-visible { outline: 2px solid var(--color-focus); outline-offset: 3px; }
-.pr-plan__foot .btn:active { transform: translateY(1px); }
+.pr-plan__foot .btn:active { transform: translateY(1px) scale(0.97); }

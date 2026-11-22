@@ -52,7 +52,8 @@
 .sol-sheet__tab--gap { margin-top: var(--space-sm); }
 .sol-sheet__act { display: flex; flex-wrap: wrap; gap: var(--space-sm); margin-top: var(--space-lg); }
 .sol-sheet__act .btn { cursor: default; }
-.sol-sheet__act .btn:active { transform: none; }
+.sol-sheet__act .btn:active, .sol-sheet__act .btn:hover { transform: none; }
+.sol-sheet__act .btn--ink::after { display: none; }
 .sol-also a:focus-visible, .sol-rows a:focus-visible { outline: 2px solid var(--color-focus); outline-offset: 2px; }
 .sol-also a:active { text-decoration-color: var(--color-accent-2); }
 .sol-sheet__sum { margin-top: var(--space-md); padding-top: var(--space-sm); border-top: 1px solid var(--color-print); color: var(--color-print); }
