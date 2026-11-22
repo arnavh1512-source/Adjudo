@@ -1,0 +1,58 @@
+/* Hallmark · shape: Letter-led company page, story beside an index of cards · genre: modern-minimal · theme: Coral (locked in design.md) · redesign: full · job: sign up
+ * hero: Banner · nav: banner over a retracting bar · footer: colophon block · imagery: the product's own stationery, the company as index cards · signature: three cotton index cards with offset tabs, the company in three facts
+ * axes: light/grotesk-sans/warm · posture: restrained · contrast: pass · fold: pass · v2.0.0 */
+
+/* story + index cards */
+.ab-story { display: grid; grid-template-columns: minmax(0, 6fr) minmax(0, 6fr); gap: var(--space-3xl); align-items: center; }
+.ab-story__text h2, .ab-why__head h2, .ab-people h2, .ab-close h2, .ab-rules__title { text-wrap: balance; }
+.ab-story__text h2 { max-width: 12ch; }
+.ab-story__text .lead { margin-top: var(--space-lg); color: var(--color-ink-2); }
+.ab-story__text p:not(.lead) { margin-top: var(--space-md); color: var(--color-ink-2); }
+.ab-cards { list-style: none; margin: 0; padding: var(--space-xl) 0 0; display: grid; gap: var(--space-md); }
+.ab-card { position: relative; padding: var(--space-lg) var(--space-xl); margin-left: calc(var(--n) * var(--space-xl)); transform: rotate(calc((var(--n) - 1) * 0.6deg)); }
+.ab-card__tab { position: absolute; top: calc(-1 * var(--space-lg)); left: calc(var(--space-lg) + var(--n) * var(--space-2xl)); padding: var(--space-2xs) var(--space-md); border-radius: var(--radius-input) var(--radius-input) 0 0; font-size: var(--text-xs); font-weight: 500; color: var(--color-muted); box-shadow: var(--edge-stock); }
+.ab-card h3 { font-size: var(--text-title); }
+.ab-card p { margin-top: var(--space-xs); color: var(--color-ink-2); }
+.ab-cards li + li { margin-top: var(--space-lg); }
+
+/* why now */
+.ab-why { display: grid; grid-template-columns: minmax(0, 4fr) minmax(0, 8fr); gap: var(--space-xl) var(--space-3xl); }
+.ab-why__head h2 { max-width: 11ch; }
+.ab-why__head p { margin-top: var(--space-md); font-size: var(--text-lead); color: var(--color-ink-2); }
+.ab-why__rows { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--color-ink); }
+.ab-why__rows li { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 6fr); gap: var(--space-xl); padding-block: var(--space-xl); border-bottom: 1px solid var(--color-rule); }
+.ab-why__rows p { color: var(--color-ink-2); }
+.ab-why__close { grid-column: 2; font: 500 var(--text-xl)/1.35 var(--font-display); letter-spacing: -0.015em; max-width: 40ch; }
+
+/* operating principles on the board */
+.ab-rules { padding-block: var(--section-gap-s); }
+.ab-rules__title { color: var(--color-board-type); }
+.ab-rules__grid { list-style: none; margin: var(--space-2xl) 0 0; padding: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 var(--space-3xl); }
+.ab-rules__grid li { padding-block: var(--space-xl); border-top: 1px solid color-mix(in oklab, var(--color-board-type) 25%, transparent); }
+.ab-rules__grid h3 { color: var(--color-board-type); }
+.ab-rules__grid p { margin-top: var(--space-sm); color: color-mix(in oklab, var(--color-board-type) 80%, transparent); }
+
+/* people and places */
+.ab-people h2 { max-width: 16ch; }
+.ab-people__cols { margin-top: var(--space-2xl); display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--space-3xl); }
+.ab-people__label { font: 500 var(--text-sm)/1.2 var(--font-body); letter-spacing: 0; color: var(--color-muted); }
+.ab-index { list-style: none; margin: var(--space-md) 0 0; padding: 0; border-top: 1px solid var(--color-ink); }
+.ab-index li { display: grid; gap: var(--space-2xs); padding-block: var(--space-lg); border-bottom: 1px solid var(--color-rule); }
+.ab-index b { font: 600 var(--text-xl)/1.15 var(--font-display); letter-spacing: -0.02em; }
+.ab-index span { color: var(--color-ink-2); }
+
+/* close */
+.ab-close { padding-block: var(--space-3xl); border-top: 1px solid var(--color-rule); }
+.ab-close__row { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: var(--space-lg) var(--space-3xl); align-items: end; }
+.ab-close__row h2 { grid-row: span 2; max-width: 10ch; }
+.ab-close .lead { color: var(--color-ink-2); max-width: 44ch; }
+
+@media (max-width: 60rem) {
+  .ab-close__row h2 { grid-row: auto; }
+  .ab-story, .ab-why, .ab-people__cols, .ab-rules__grid, .ab-close__row { grid-template-columns: minmax(0, 1fr); gap: var(--space-xl); }
+  .ab-why__close { grid-column: 1; }
+  .ab-why__rows li { grid-template-columns: minmax(0, 1fr); gap: var(--space-xs); }
+}
+@media (max-width: 40rem) {
+  .ab-card { margin-left: calc(var(--n) * var(--space-md)); padding: var(--space-lg); }
+}

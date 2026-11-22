@@ -1,5 +1,5 @@
 /* Hallmark · shape: Map / Diagram, from draw 46c5ab · genre: modern-minimal · theme: Coral (deal 1/3, seed clean-corporate-company-adjudo-4083·53aa9f28·2026-11-22·r0) · redesign: full · job: sign up (the waitlist, paid pilots) · draw: 46c5ab
- * hero: Stage, the claim played as paperwork on the desk · nav: banner over a retracting bar · footer: colophon block · imagery: the product, built as stationery · signature: the decision letter laid on the hospital bill, Signed pressed into the stock
+ * hero: Stage (/), Banner (/about), Banner (/solutions/payers), Banner (/solutions/tpas), Banner (/solutions/hospitals), Banner (/healthcare), Banner (/pricing), Banner (/security), Banner (/careers), Banner (/contact), Banner (/legal/privacy); the home hero is the claim played as paperwork on the desk · nav: banner over a retracting bar · footer: colophon block · imagery: the product, built as stationery · signature: the decision letter laid on the hospital bill, Signed pressed into the stock
  * axes: light/grotesk-sans/warm · posture: restrained · contrast: pass · fold: pass · v2.0.0 */
 /* Chrome: a banner over a bar that retracts on scroll (the banner scrolls away, the bar stays), and the colophon footer. */
 .site-header { position: sticky; top: calc(-1 * var(--banner-h)); z-index: var(--z-sticky-nav); }
@@ -54,7 +54,8 @@
 .skip:focus-visible { top: var(--space-md); outline: 2px solid var(--color-focus); outline-offset: 2px; }
 
 /* inner-page hero, Banner posture */
-.page-hero { padding-block: var(--space-3xl) var(--space-2xl); border-bottom: 1px solid var(--color-rule); }
+.page-hero { padding-block: var(--space-3xl) var(--space-xl); border-bottom: 1px solid var(--color-rule); }
+.page-hero + .section--first, .page-hero + .section { padding-top: var(--space-3xl); }
 .crumbs { display: flex; flex-wrap: wrap; gap: var(--space-xs); list-style: none; margin: 0 0 var(--space-xl); padding: 0; font-size: var(--text-sm); color: var(--color-muted); }
 .crumbs li + li::before { content: "/"; margin-right: var(--space-xs); color: var(--color-rule-2); }
 .crumbs a { color: var(--color-ink-2); text-decoration: none; }
