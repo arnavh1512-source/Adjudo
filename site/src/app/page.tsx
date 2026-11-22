@@ -8,14 +8,14 @@ import { Questions } from '@/components/home/Questions';
 import { site } from '@/content/site';
 
 export const metadata: Metadata = {
-  title: { absolute: 'Adjudo · Audit-grade AI claims adjudication for India’s TPAs and insurers' },
-  description: 'Adjudo applies the policy to the hospital bill, cites every clause and signs every decision, for India’s insurers, TPAs and hospitals.',
+  title: { absolute: 'AdjudoAI · Audit-grade AI claims adjudication for India’s TPAs and insurers' },
+  description: 'AdjudoAI applies the policy to the hospital bill, cites every clause and signs every decision, for India’s insurers, TPAs and hospitals.',
 };
 
 const questions = [
   { q: 'Is it IRDAI compliant?', a: 'We meet IRDAI’s audit-trail expectations: an append-only adjudication ledger, 8-year retention, signed and hash-chained, with full prompt and model version provenance.' },
   { q: 'Do you train on our data?', a: 'No, never on customer claims by default. If you opt in to a custom fine-tune, training runs in your tenant on your data only, and the resulting weights are yours.' },
-  { q: 'Can we run it on-prem?', a: 'Yes. Hospital networks bound by NABH and insurers with strict data residency rules can run Adjudo inside their VPC, on a single GPU appliance, or fully air-gapped.' },
+  { q: 'Can we run it on-prem?', a: 'Yes. Hospital networks bound by NABH and insurers with strict data residency rules can run AdjudoAI inside their VPC, on a single GPU appliance, or fully air-gapped.' },
   { q: 'How long is a typical pilot?', a: 'Thirty to sixty days. We onboard one line of business, run shadow mode for one to two weeks, then move to assist or auto, and finish with a written ROI report.' },
   { q: 'What happens when the model is unsure?', a: 'Each decision carries a calibrated confidence score. Below your threshold, the claim goes to a person with the reasoning and cited clauses already loaded.' },
 ];
@@ -34,7 +34,7 @@ export default function Home() {
         <div className="container hero__grid">
           <div className="hero__text">
             <h1 id="hero-title">Every claim decision, cited and signed.</h1>
-            <p className="lead">Adjudo applies the policy to the hospital bill, then signs the decision.</p>
+            <p className="lead">AdjudoAI applies the policy to the hospital bill, then signs the decision.</p>
             <div className="actions">
               <Link href={site.waitlistHref} className="btn btn--ink">Join the waitlist</Link>
               <a href={`mailto:${site.email.hello}?subject=Sample%20claim`} className="btn btn--card">Send a sample claim</a>
@@ -44,7 +44,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 2 · the map: where Adjudo sits */}
+      {/* 2 · the map: where AdjudoAI sits */}
       <section className="section desk map-band" aria-labelledby="map-title">
         <div className="container">
           <div className="head">
@@ -99,7 +99,7 @@ export default function Home() {
   "claim_id": "100247",
   "decision": "approved_with_deductions",
   "billed": 148800,
-  "approved": 111700,
+  "approved": 112700,
   "deductions": [
     { "line": "room_rent",   "amount": 24000, "clause": "3.2(a)" },
     { "line": "consumables", "amount": 7100,  "clause": "4.1" },
@@ -125,7 +125,7 @@ export default function Home() {
           </div>
           <div className="pricing">
             <table className="table pricing__table">
-              <caption className="visually-hidden">Adjudo plans</caption>
+              <caption className="visually-hidden">AdjudoAI plans</caption>
               <thead><tr><th scope="col"><span className="visually-hidden">Plan detail</span></th>{tiers.map((t) => (<th key={t.name} scope="col" className={`pricing__plan${t.name === 'Growth' ? ' is-featured' : ''}`}>{t.name}{t.name === 'Growth' ? <span className="pricing__note">Most chosen</span> : null}</th>))}</tr></thead>
               <tbody>
                 <tr><th scope="row">For</th>{tiers.map((t) => <td key={t.name} className={t.name === 'Growth' ? 'is-featured' : undefined}>{t.for}</td>)}</tr>
@@ -135,7 +135,7 @@ export default function Home() {
                 <tr><th scope="row">Support</th>{tiers.map((t) => <td key={t.name} className={t.name === 'Growth' ? 'is-featured' : undefined}>{t.support}</td>)}</tr>
               </tbody>
             </table>
-            <ol className="plans" aria-label="Adjudo plans">
+            <ol className="plans" aria-label="AdjudoAI plans">
               {tiers.map((t) => (
                 <li key={t.name} className={`plans__item${t.name === 'Growth' ? ' is-featured' : ''}`}>
                   <h3>{t.name}{t.name === 'Growth' ? <span className="pricing__note">Most chosen</span> : null}</h3>

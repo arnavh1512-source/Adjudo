@@ -5,12 +5,12 @@ import { WaitlistForm } from '@/components/WaitlistForm';
 import { offices, site } from '@/content/site';
 
 export const metadata: Metadata = {
-  title: 'Contact Adjudo',
+  title: 'Contact AdjudoAI',
   description: 'Sales, security reports and careers, from our offices in Pune and Ahmedabad.',
 };
 
 const channels = [
-  { title: 'Sales and early access', body: 'For insurers, TPAs, and hospital networks evaluating Adjudo.', email: site.email.hello },
+  { title: 'Sales and early access', body: 'For insurers, TPAs, and hospital networks evaluating AdjudoAI.', email: site.email.hello },
   { title: 'Security and vulnerability reports', body: 'Responsible disclosure, security questionnaires, DPA requests.', email: site.email.security },
   { title: 'Careers', body: 'TPA / insurance specialists, backend and AI/ML engineers, infra, security, forward deployment, interns. See the careers page for open roles.', email: site.email.hello },
 ];
@@ -37,7 +37,7 @@ export default function Contact() {
         </div>
       </section>
 
-      <section className="section section--paper2" aria-labelledby="con-offices-title">
+      <section className="section section--l section--paper2" aria-labelledby="con-offices-title">
         <div className="container con-offices-grid">
           <div className="con-offices__text">
             <h2 id="con-offices-title">Pune and Ahmedabad.</h2>

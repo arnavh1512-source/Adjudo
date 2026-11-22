@@ -18,7 +18,7 @@ export function SolutionPage({ a, visual, caption }: { a: Audience; visual: Reac
         <Link href="/pricing" className="btn btn--card">See pricing</Link>
       </PageHero>
 
-      <section className="section--s sol-figures" aria-label="Adjudo in numbers">
+      <section className="section--s sol-figures" aria-label="AdjudoAI in numbers">
         <div className="container">
           <ul className="sol-figs">
             {a.figures.map((f) => (

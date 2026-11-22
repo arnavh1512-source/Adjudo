@@ -11,10 +11,10 @@ const HALLMARK_STAMP = `/* Hallmark · shape: Map / Diagram, from draw 46c5ab ·
 
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
-  title: { default: 'Adjudo · Audit-grade AI claims adjudication for India', template: '%s · Adjudo' },
+  title: { default: 'AdjudoAI · Audit-grade AI claims adjudication for India', template: '%s · AdjudoAI' },
   description: site.description,
-  openGraph: { siteName: 'Adjudo', type: 'website', title: 'Adjudo · Every claim decision, cited and signed', description: site.description, url: site.url },
-  twitter: { card: 'summary_large_image', title: 'Adjudo · Every claim decision, cited and signed', description: site.description },
+  openGraph: { siteName: 'AdjudoAI', type: 'website', title: 'AdjudoAI · Every claim decision, cited and signed', description: site.description, url: site.url },
+  twitter: { card: 'summary_large_image', title: 'AdjudoAI · Every claim decision, cited and signed', description: site.description },
   icons: { icon: '/icon.svg' },
 };
 

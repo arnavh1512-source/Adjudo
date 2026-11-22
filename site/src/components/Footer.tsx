@@ -14,14 +14,14 @@ export function Footer() {
       <div className="container colophon__grid">
         <p className="wordmark wordmark--lg">adjudoai</p>
         <div className="colophon__text">
-          <p>Adjudo AI builds the audit-grade claims engine for India’s TPAs, insurers and hospitals. Engineering in Pune, ML research in Ahmedabad. Write to <a className="link" href={`mailto:${site.email.hello}`}>{site.email.hello}</a>, or for security matters <a className="link" href={`mailto:${site.email.security}`}>{site.email.security}</a>.</p>
+          <p>AdjudoAI builds the audit-grade claims engine for India’s TPAs, insurers and hospitals. Engineering in Pune, ML research in Ahmedabad. Write to <a className="link" href={`mailto:${site.email.hello}`}>{site.email.hello}</a>, or for security matters <a className="link" href={`mailto:${site.email.security}`}>{site.email.security}</a>.</p>
           <nav aria-label="Footer">
             <ul className="colophon__links">
               {links.map((l) => (<li key={l.href}><Link href={l.href}>{l.label}</Link></li>))}
               <li><a href={site.linkedin}>LinkedIn</a></li>
             </ul>
           </nav>
-          <p className="colophon__legal">© 2026 Adjudo AI. {site.signoff}</p>
+          <p className="colophon__legal">© 2026 AdjudoAI. {site.signoff}</p>
         </div>
       </div>
     </footer>

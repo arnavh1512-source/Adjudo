@@ -19,7 +19,7 @@ export function HeroDesk() {
   }, []);
 
   return (
-    <div ref={ref} className="paperwork" role="img" aria-label="A sample claim: the hospital bill of ₹1,48,800, the decision approving ₹1,11,700 with three cited deductions, signed.">
+    <div ref={ref} className="paperwork" role="img" aria-label="A sample claim: the hospital bill of ₹1,48,800, the decision approving ₹1,12,700 with three cited deductions, signed.">
       <div className="sheet sheet--bill stock" aria-hidden="true">
         <p className="sheet__title">Final bill</p>
         <p className="sheet__meta">Claim 100247, sample hospital, Pune</p>
@@ -43,7 +43,7 @@ export function HeroDesk() {
             <tr><td>Co-payment <b>§2.4</b></td><td className="fig">−5,000</td></tr>
           </tbody>
         </table>
-        <p className="sheet__amount">₹1,11,700</p>
+        <p className="sheet__amount">₹1,12,700</p>
         <div className="sheet__sign"><span className="pressed">Signed</span><span className="fig">814e…a26f</span></div>
       </div>
       <div className="clause-card stock" aria-hidden="true">

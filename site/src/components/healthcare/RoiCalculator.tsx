@@ -36,7 +36,7 @@ export function RoiCalculator() {
   return (
     <div className="container hc-roi__grid">
       <div className="hc-roi__main">
-        <h2 id="roi-title">What Adjudo saves your team.</h2>
+        <h2 id="roi-title">What AdjudoAI saves your team.</h2>
         <p className="hc-roi__lead">Move the sliders and the numbers follow. A conservative model: 80% less adjudication time and a 4 point drop in leakage, typical of our pilots.</p>
 
         <output className="hc-roi__figure" htmlFor={fields.map((f) => `${uid}-${f.key}`).join(' ')}>

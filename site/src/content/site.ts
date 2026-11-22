@@ -2,8 +2,8 @@
 // Do not add numbers, quotes, logos or customer names that are not in that file.
 
 export const site = {
-  name: 'Adjudo',
-  legalName: 'Adjudo AI',
+  name: 'AdjudoAI',
+  legalName: 'AdjudoAI',
   url: 'https://www.adjudoai.com',
   tagline: 'Every claim decision, cited and signed.',
   description:
@@ -101,8 +101,8 @@ export const principles = [
 
 export const steps = [
   { title: 'Drop the docs', body: 'Policy, hospital bill, discharge summary and pre-auth letter. PDFs or photos, the flow your reviewers already run.' },
-  { title: 'Adjudo adjudicates', body: 'The engine reads the policy and walks the bill line by line, applying every rule deterministically, each field cited.' },
+  { title: 'AdjudoAI adjudicates', body: 'The engine reads the policy and walks the bill line by line, applying every rule deterministically, each field cited.' },
   { title: 'Signed decision out', body: 'Approve, query or deny with reasoning, cited clauses and a tamper-evident audit row.' },
   { title: 'Copilot fills the portal', body: 'The Copilot types the decision into the insurer or TPA portal. You review and submit, with no re-keying.' },
-  { title: 'Query? Reply, cited', body: 'When the insurer raises a query, Adjudo drafts the response with the exact clause and document that answers it.' },
+  { title: 'Query? Reply, cited', body: 'When the insurer raises a query, AdjudoAI drafts the response with the exact clause and document that answers it.' },
 ];

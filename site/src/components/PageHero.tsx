@@ -11,7 +11,7 @@ export function PageHero({ crumbs, title, lead, children }: { crumbs: Crumb[]; t
         <nav aria-label="Breadcrumb">
           <ol className="crumbs">
             <li><Link href="/">Home</Link></li>
-            {crumbs.map((c) => (<li key={c.label}>{c.href ? <Link href={c.href}>{c.label}</Link> : <span aria-current="page">{c.label}</span>}</li>))}
+            {crumbs.map((c, i) => (<li key={c.label}>{c.href ? <Link href={c.href}>{c.label}</Link> : <span aria-current={i === crumbs.length - 1 ? 'page' : undefined}>{c.label}</span>}</li>))}
           </ol>
         </nav>
         <h1>{title}</h1>

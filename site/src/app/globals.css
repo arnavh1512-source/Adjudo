@@ -101,3 +101,7 @@ p { max-width: 65ch; }
 @media (max-width: 60rem) {
   .head { grid-template-columns: minmax(0, 1fr); gap: var(--space-md); }
 }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { transition-duration: 0.01ms !important; animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; }
+}

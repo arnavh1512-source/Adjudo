@@ -91,20 +91,20 @@ export default function Healthcare() {
       <section className="section section--paper2" aria-labelledby="hc-compare-title">
         <div className="container">
           <div className="head">
-            <h2 id="hc-compare-title">Before and after Adjudo.</h2>
+            <h2 id="hc-compare-title">Before and after AdjudoAI.</h2>
             <p>The reviewer’s day, cut in half.</p>
           </div>
           <table className="table hc-compare">
-            <caption className="visually-hidden">Today against working with Adjudo</caption>
+            <caption className="visually-hidden">Today against working with AdjudoAI</caption>
             <thead>
-              <tr><th scope="col">Dimension</th><th scope="col">Today</th><th scope="col">With Adjudo</th></tr>
+              <tr><th scope="col">Dimension</th><th scope="col">Today</th><th scope="col">With AdjudoAI</th></tr>
             </thead>
             <tbody>
               {compare.map((r) => (
                 <tr key={r.dim}>
                   <th scope="row">{r.dim}</th>
                   <td data-label="Today">{r.today}</td>
-                  <td data-label="With Adjudo">{r.now}</td>
+                  <td data-label="With AdjudoAI">{r.now}</td>
                 </tr>
               ))}
             </tbody>
@@ -121,7 +121,7 @@ export default function Healthcare() {
       <section className="hc-close desk" aria-labelledby="hc-close-title">
         <div className="container hc-close__row">
           <div>
-            <h2 id="hc-close-title">Put Adjudo behind your claims.</h2>
+            <h2 id="hc-close-title">Put AdjudoAI behind your claims.</h2>
             <p className="lead">A small cohort of payers, TPAs and hospital networks gets sandbox access and locked-in Year-1 pricing.</p>
           </div>
           <div className="actions">

@@ -5,6 +5,7 @@
 
 
 /* Hallmark · waive 26b · the channels and offices have no form control or disabled state · their only interactive elements are mailto links with hover, focus-visible and active states */
+/* Hallmark · waive 77 · the Pune and Ahmedabad offices are two entries in an index beside their heading · two offices cannot be padded into a wider body without inventing content */
 /* Hallmark · waive 85 · the visitor came to make contact and the brief for this route ends on the waitlist form · the form is the page's job, not a newsletter close */
 /* Hallmark · waive 39b · the contact waitlist form uses the shared WaitlistForm Astryx inputs, whose wrapper fields give the controls their hit area · the page does not size them */
 .con-channels { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: var(--space-3xl); align-items: start; }
@@ -18,9 +19,9 @@
 .con-channels__list .link { display: inline-flex; align-items: center; min-height: 44px; overflow-wrap: anywhere; }
 
 .con-offices-grid { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: var(--space-3xl); align-items: start; }
-.con-offices__text h2 { max-width: 9ch; text-wrap: balance; }
+.con-offices__text h2 { max-width: 13ch; text-wrap: balance; }
 .con-offices__text .lead { margin-top: var(--space-lg); color: var(--color-ink-2); max-width: 34ch; }
-.con-offices { margin: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--space-xl); border-top: 1px solid var(--color-ink); }
+.con-offices { border-bottom: 1px solid var(--color-rule-2); margin: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--space-xl); border-top: 1px solid var(--color-ink); }
 .con-offices > div { display: grid; gap: var(--space-xs); padding-block: var(--space-xl) var(--space-2xl); }
 .con-offices dt { font: 600 var(--text-3xl)/1.1 var(--font-display); letter-spacing: -0.02em; }
 .con-offices dd { margin: 0; color: var(--color-ink-2); }
@@ -43,4 +44,8 @@
   .con-offices { grid-template-columns: minmax(0, 1fr); gap: 0; }
   .con-offices > div + div { border-top: 1px solid var(--color-rule-2); }
   .con-wait .waitlist { padding: var(--space-lg); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { transition-duration: 0.01ms !important; animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; }
 }

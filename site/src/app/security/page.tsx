@@ -5,7 +5,7 @@ import { site } from '@/content/site';
 
 export const metadata: Metadata = {
   title: 'Security and compliance',
-  description: 'How Adjudo handles patient data: IRDAI, DPDP and NABH-aware controls, signed audit trails, encryption, sub-processors and the path to ISO 27001.',
+  description: 'How AdjudoAI handles patient data: IRDAI, DPDP and NABH-aware controls, signed audit trails, encryption, sub-processors and the path to ISO 27001.',
 };
 
 const controls = [
@@ -110,7 +110,7 @@ export default function Security() {
         </div>
       </section>
 
-      <section className="section" aria-labelledby="sec-sub-title">
+      <section className="section section--l" aria-labelledby="sec-sub-title">
         <div className="container sec-sub">
           <div className="sec-sub__text">
             <h2 id="sec-sub-title">Who can touch your environment.</h2>

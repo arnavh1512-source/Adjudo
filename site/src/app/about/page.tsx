@@ -6,7 +6,7 @@ import { founders, offices, principles, site } from '@/content/site';
 
 export const metadata: Metadata = {
   title: 'About',
-  description: 'Adjudo is building the system of record for how insurance claims get decided, for India’s insurers, TPAs and hospital networks.',
+  description: 'AdjudoAI is building the system of record for how insurance claims get decided, for India’s insurers, TPAs and hospital networks.',
 };
 
 const facts = [
@@ -34,7 +34,7 @@ export default function About() {
             <p className="lead">Lakhs of crores move through adjudication every year, decided by people reading PDFs.</p>
             <p>We are changing that without losing what regulators require: the cited reasoning behind every decision and a signed audit trail nobody can quietly edit.</p>
           </div>
-          <ul className="ab-cards" aria-label="Adjudo in three facts">
+          <ul className="ab-cards" aria-label="AdjudoAI in three facts">
             {facts.map((f, i) => (
               <li key={f.title} className="ab-card stock" style={{ ['--n' as string]: i }}>
                 <span className="ab-card__tab stock" aria-hidden="true">{f.tab}</span>

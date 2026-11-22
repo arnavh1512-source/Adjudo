@@ -49,7 +49,7 @@ const plans: Plan[] = [
 /** Three plans as side-by-side columns: name, price, line, a hairline list, the button pinned to the foot. */
 export function Plans() {
   return (
-    <ol className="pr-plans" aria-label="Adjudo plans">
+    <ol className="pr-plans" aria-label="AdjudoAI plans">
       {plans.map((p) => (
         <li key={p.name} className={`pr-plan${p.featured ? ' is-featured' : ''}`}>
           <div className="pr-plan__head">

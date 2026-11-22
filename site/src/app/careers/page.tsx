@@ -6,7 +6,7 @@ import { roles } from '@/components/company/roles';
 import { principles, site } from '@/content/site';
 
 export const metadata: Metadata = {
-  title: 'Careers at Adjudo',
+  title: 'Careers at AdjudoAI',
   description: 'Help build the system of record for how insurance claims get decided, in Pune and Ahmedabad.',
 };
 

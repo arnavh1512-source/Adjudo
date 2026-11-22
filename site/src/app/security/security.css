@@ -31,7 +31,7 @@
 .sec-table--posture th[scope="row"] { width: 16%; font-size: var(--text-lg); }
 .sec-table--posture td:nth-child(2) { width: 22%; font-weight: 500; }
 .sec-table--posture td:nth-child(3) { color: var(--color-ink-2); }
-.sec-sub { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: var(--space-3xl); align-items: start; }
+.sec-sub { display: grid; grid-template-columns: minmax(0, 4fr) minmax(0, 8fr); gap: var(--space-3xl); align-items: start; }
 .sec-sub__text h2 { max-width: 11ch; }
 .sec-sub__text .lead { margin-top: var(--space-lg); color: var(--color-ink-2); max-width: 34ch; }
 .sec-table--vendors th[scope="row"] { font-weight: 500; }
@@ -65,4 +65,8 @@
   .sec-table tbody th, .sec-table td { padding: 0 0 var(--space-xs); border: 0; width: auto !important; }
   .sec-table tbody th { font-size: var(--text-lg) !important; }
   .sec-table td::before { content: attr(data-label); display: block; font-size: var(--text-sm); font-weight: 400; color: var(--color-muted); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { transition-duration: 0.01ms !important; animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; }
 }

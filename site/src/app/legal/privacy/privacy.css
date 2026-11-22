@@ -35,3 +35,7 @@
   .leg-doc__grid, .leg-close__row { grid-template-columns: minmax(0, 1fr); gap: var(--space-xl); }
   .leg-toc { position: static; }
 }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { transition-duration: 0.01ms !important; animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; }
+}

@@ -6,7 +6,7 @@ import { useCallback, useEffect, useRef } from 'react';
 type Edge = [string, string];
 const edges: Edge[] = [['hosp', 'adj'], ['adj', 'tpa'], ['adj', 'ins'], ['adj', 'ledger']];
 
-/** System map: the three desks a claim crosses, Adjudo between them, the ledger beneath. Edges are measured from the nodes. */
+/** System map: the three desks a claim crosses, AdjudoAI between them, the ledger beneath. Edges are measured from the nodes. */
 export function SystemMap() {
   const root = useRef<HTMLDivElement>(null);
   const svg = useRef<SVGSVGElement>(null);
@@ -45,7 +45,7 @@ export function SystemMap() {
   }, [draw]);
 
   return (
-    <div ref={root} className="map" aria-label="Diagram of the claim flow between hospital, Adjudo, TPA, insurer and the audit ledger">
+    <div ref={root} className="map" aria-label="Diagram of the claim flow between hospital, AdjudoAI, TPA, insurer and the audit ledger">
       <svg ref={svg} className="map__edges" aria-hidden="true" focusable="false">
         {edges.map(([a, b]) => (<path key={a + b} d="" />))}
       </svg>
@@ -56,7 +56,7 @@ export function SystemMap() {
           <Link className="link" href="/solutions/hospitals">For hospitals</Link>
         </li>
         <li className="map__node map__node--core board" data-node="adj" style={{ ['--i' as string]: 1 }}>
-          <h3>Adjudo</h3>
+          <h3>AdjudoAI</h3>
           <p>Reads the policy, walks the bill line by line, cites every clause and signs the decision.</p>
         </li>
         <li className="map__node stock" data-node="tpa" style={{ ['--i' as string]: 2 }}>

@@ -14,7 +14,7 @@ export const metadata: Metadata = {
 const questions = [
   { q: 'Do you charge per claim or per seat?', a: 'Both, depending on tier. Pilot is a flat platform fee. Growth and Enterprise blend a platform fee with per-adjudication pricing that decreases with volume. Reviewer console seats are bundled; we don’t charge per officer.' },
   { q: 'How long is a typical pilot?', a: 'Thirty to sixty days. We onboard one line of business, run shadow mode for one to two weeks (decisions reviewed but not enforced), then move to assist or auto. We guarantee a written ROI report at the end.' },
-  { q: 'Can we run on-prem?', a: 'Yes. Indian hospital networks bound by NABH and insurers with strict data residency rules can run Adjudo entirely inside their VPC, on a single GPU appliance, or fully air-gapped. The product is the same.' },
+  { q: 'Can we run on-prem?', a: 'Yes. Indian hospital networks bound by NABH and insurers with strict data residency rules can run AdjudoAI entirely inside their VPC, on a single GPU appliance, or fully air-gapped. The product is the same.' },
   { q: 'What about IRDAI, DPDP and NABH?', a: 'IRDAI: the signed audit trail meets the 8-year retention requirement out of the box. DPDP: India data residency is the default. NABH-aware safeguards for hospital deployments, with a DPA on Growth and Enterprise. See the Security page for details.' },
   { q: 'Do you train on our data?', a: 'No, never on customer claims by default. If you opt in to a custom fine-tune, training runs in your tenant on your data only, and the resulting weights are yours.' },
 ];

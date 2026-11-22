@@ -12,7 +12,7 @@ const workflows: Workflow[] = [
     title: 'Pre-authorization',
     steps: [
       'The hospital submits the pre-auth with policy, diagnosis and estimated cost.',
-      'Adjudo matches it to the policy schedule, applies tariff rates and sub-limits, and returns an approval or a query.',
+      'AdjudoAI matches it to the policy schedule, applies tariff rates and sub-limits, and returns an approval or a query.',
       'You get a cited decision, not a queue ticket.',
     ],
     sheet: (
@@ -37,7 +37,7 @@ const workflows: Workflow[] = [
     title: 'Cashless final bill',
     steps: [
       'On discharge, the hospital pushes the itemised final bill and discharge summary.',
-      'Adjudo re-adjudicates against the approved pre-auth and the new line items.',
+      'AdjudoAI re-adjudicates against the approved pre-auth and the new line items.',
       'It flags scope creep, unbundling, room-rate overruns and tariff drift.',
     ],
     sheet: (
@@ -63,7 +63,7 @@ const workflows: Workflow[] = [
     title: 'Reimbursement',
     steps: [
       'The member uploads the bill, discharge summary and investigations on the portal.',
-      'Adjudo runs the full adjudication: policy match, exclusions, sub-limits, co-payment and deductions.',
+      'AdjudoAI runs the full adjudication: policy match, exclusions, sub-limits, co-payment and deductions.',
       'It outputs an itemised settlement letter, ready for ops review.',
     ],
     sheet: (
@@ -77,7 +77,7 @@ const workflows: Workflow[] = [
             <tr><td>Co-payment <b>§2.4</b></td><td className="fig">−5,000</td></tr>
           </tbody>
         </table>
-        <p className="hc-sheet__amount">₹1,11,700</p>
+        <p className="hc-sheet__amount">₹1,12,700</p>
         <div className="hc-sheet__sign"><span className="pressed">Signed</span><span className="fig">814e…a26f</span></div>
       </div>
     ),

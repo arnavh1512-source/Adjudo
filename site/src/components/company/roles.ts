@@ -5,7 +5,7 @@ export const roles: Role[] = [
   {
     title: 'Forward Deployment Engineer', subject: 'Forward Deployment Engineer',
     where: 'Pune, Ahmedabad', type: 'Full-time, on-site with customers',
-    about: 'Live inside our first TPAs, insurers, and hospitals for weeks at a time. Translate their ground truth (denial logic, IRDAI quirks, NPPA caps, NABH workflows) into product. The first ten hires here will shape how Adjudo gets adopted.',
+    about: 'Live inside our first TPAs, insurers, and hospitals for weeks at a time. Translate their ground truth (denial logic, IRDAI quirks, NPPA caps, NABH workflows) into product. The first ten hires here will shape how AdjudoAI gets adopted.',
     you: ['5+ years shipping software with at least 1 year embedded with customers', 'Comfortable writing production code in Python or TypeScript and SQL', 'Strong instinct for what to build, what to script, what to throw away', 'Empathy for non-technical reviewers; you’ll sit next to claims officers'],
     nice: ['Prior life in health insurance, TPA ops, insurer claims, or hospital revenue cycle', 'Experience with HL7/FHIR or IRDAI/NABH workflows'],
   },
@@ -26,7 +26,7 @@ export const roles: Role[] = [
   {
     title: 'Security Engineer', subject: 'Security Engineer',
     where: 'Remote (India)', type: 'Full-time',
-    about: 'Adjudo handles sensitive health data on day one. You’ll own IRDAI + DPDP controls, and walk us through ISO 27001 in year one. The audit trail is signed by construction (HMAC-chained adjudications), so your job is to make sure the rest of the surface is just as defensible.',
+    about: 'AdjudoAI handles sensitive health data on day one. You’ll own IRDAI + DPDP controls, and walk us through ISO 27001 in year one. The audit trail is signed by construction (HMAC-chained adjudications), so your job is to make sure the rest of the surface is just as defensible.',
     you: ['5+ years in security engineering at a health, fintech, or infra company', 'Hands-on with threat modeling, SAST/DAST, secret hygiene, IAM design', 'Have led at least one ISO 27001 / IRDAI audit through to signed report', 'Read code as well as policy: you can spot a bad RLS policy and a bad DPA clause'],
     nice: ['Familiarity with sensitive health-data handling, DPA workflows, and IRDAI / DPDP requirements', 'Worked on detection engineering or incident response in regulated industries'],
   },
