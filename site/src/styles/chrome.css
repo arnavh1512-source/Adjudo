@@ -52,3 +52,18 @@
 /* a way past the nav */
 .skip { position: absolute; left: var(--space-md); top: calc(-1 * var(--space-3xl)); z-index: var(--z-toast); padding: var(--space-xs) var(--space-md); background: var(--color-board); color: var(--color-board-type); border-radius: var(--radius-input); }
 .skip:focus-visible { top: var(--space-md); outline: 2px solid var(--color-focus); outline-offset: 2px; }
+
+/* inner-page hero, Banner posture */
+.page-hero { padding-block: var(--space-3xl) var(--space-2xl); border-bottom: 1px solid var(--color-rule); }
+.crumbs { display: flex; flex-wrap: wrap; gap: var(--space-xs); list-style: none; margin: 0 0 var(--space-xl); padding: 0; font-size: var(--text-sm); color: var(--color-muted); }
+.crumbs li + li::before { content: "/"; margin-right: var(--space-xs); color: var(--color-rule-2); }
+.crumbs a { color: var(--color-ink-2); text-decoration: none; }
+.crumbs a:hover { text-decoration: underline; text-decoration-color: var(--color-accent-2); }
+.crumbs a:focus-visible { outline: 2px solid var(--color-focus); outline-offset: 2px; }
+.page-hero h1 { font-size: var(--text-display-s); line-height: 1.04; max-width: 18ch; }
+.page-hero__lead { margin-top: var(--space-lg); color: var(--color-ink-2); }
+.page-hero__actions { margin-top: var(--space-xl); }
+
+/* learn-more link with the transitions.dev #24 chevron */
+.learn { display: inline-flex; align-items: center; gap: var(--space-2xs); white-space: nowrap; }
+.learn svg { width: 16px; height: 16px; fill: none; stroke: currentColor; stroke-width: 1.75; stroke-linecap: round; }
