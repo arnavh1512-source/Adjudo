@@ -1,0 +1,373 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Adjudo: health claims adjudicated with the clause behind every cut</title>
+<meta name="description" content="Adjudo reads the policy, walks the hospital bill line by line and signs every decision, for India’s insurers, TPAs and hospitals.">
+<link rel="preconnect" href="https://api.fontshare.com">
+<link rel="preconnect" href="https://cdn.fontshare.com" crossorigin>
+<link href="https://api.fontshare.com/v2/css?f[]=clash-grotesk@500,600&f[]=switzer@400,500&f[]=gambetta@400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<script>document.documentElement.classList.add('js');</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="nav">
+  <div class="container nav__bar">
+    <a class="wordmark" href="#" aria-label="Adjudo home">adjudo</a>
+    <nav aria-label="Main">
+      <ul class="nav__links">
+        <li><a href="#desks">Insurers</a></li>
+        <li><a href="#desks">TPAs</a></li>
+        <li><a href="#desks">Hospitals</a></li>
+        <li><a href="#record">Security</a></li>
+        <li><a href="#close">Pricing</a></li>
+        <li><a href="#team">Careers</a></li>
+      </ul>
+    </nav>
+    <div class="nav__end">
+      <a class="btn btn--sm" href="#close">Join the waitlist</a>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+<!-- 1 · the claim on the desk -->
+<section class="hero" aria-labelledby="hero-title">
+  <div class="container">
+    <div class="hero__text">
+      <h1 id="hero-title">No rupee cut without its clause.</h1>
+      <div class="hero__side">
+        <p class="lead">Adjudo adjudicates health claims for India’s insurers, TPAs and hospitals.</p>
+        <div class="actions">
+          <a class="btn" href="#close">Join the waitlist</a>
+          <a class="btn btn--quiet" href="mailto:hello@adjudoai.com?subject=Sample%20claim">Send a sample claim</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="desk-band" aria-label="A sample claim, adjudicated">
+  <div class="container">
+    <div class="desk" data-desk>
+      <div class="bill-col">
+      <article class="bill" aria-labelledby="bill-title">
+        <header class="bill__head">
+          <h2 id="bill-title" class="bill__title">Final bill, claim 100247</h2>
+          <p>Duplicate, Pune</p>
+        </header>
+        <ol class="bill__lines">
+          <li><button type="button" class="line is-cut" data-clause="c32a" aria-pressed="true"><span class="line__name">Room rent, 4 days</span><span class="line__amt"><s>₹56,000</s> ₹32,000</span><span class="line__note">§3.2(a) −₹24,000</span></button></li>
+          <li><button type="button" class="line" data-clause="c61" aria-pressed="false"><span class="line__name">Surgery, nursing, visits</span><span class="line__amt">₹49,700</span><span class="line__note line__note--pass">§6.1 passes</span></button></li>
+          <li><button type="button" class="line is-cut" data-clause="c41" aria-pressed="false"><span class="line__name">Pharmacy, consumables</span><span class="line__amt"><s>₹21,300</s> ₹14,200</span><span class="line__note">§4.1 −₹7,100</span></button></li>
+          <li><button type="button" class="line" data-clause="c53" aria-pressed="false"><span class="line__name">MRI and lab tests</span><span class="line__amt">₹21,800</span><span class="line__note line__note--pass">§5.3 passes</span></button></li>
+          <li><button type="button" class="line is-cut" data-clause="c24" aria-pressed="false"><span class="line__name">Co-payment</span><span class="line__amt">−₹5,000</span><span class="line__note">§2.4 −₹5,000</span></button></li>
+        </ol>
+        <footer class="bill__foot">
+          <p><span>Billed</span><b class="num">₹1,48,800</b></p>
+          <p class="bill__approved"><span>Approved</span><b class="num">₹1,11,700</b></p>
+        </footer>
+      </article>
+      <p class="desk__hint">Pick a line to read its clause.</p>
+      </div>
+
+      <svg class="desk__thread" aria-hidden="true" focusable="false"><path d="" /></svg>
+
+      <article class="policy" aria-labelledby="policy-title">
+        <header class="policy__head">
+          <h2 id="policy-title" class="policy__title">Policy schedule</h2>
+          <p>Sample wording</p>
+        </header>
+        <div class="policy__clauses">
+          <section class="clause" id="c24"><h3>§2.4 Co-payment</h3><p>The insured bears the co-payment in the plan schedule.</p></section>
+          <section class="clause is-active" id="c32a"><h3>§3.2(a) Room rent</h3><p>Room rent is payable up to <mark>₹8,000 per day</mark> for a single private room.</p></section>
+          <section class="clause" id="c41"><h3>§4.1 Pharmacy and consumables</h3><p>Admissible in proportion to the eligible room.</p></section>
+          <section class="clause" id="c53"><h3>§5.3 Diagnostics</h3><p>Payable within the diagnostic sub-limit.</p></section>
+          <section class="clause" id="c61"><h3>§6.1 Treatment</h3><p>Surgery, nursing and visits are payable in full.</p></section>
+        </div>
+        <footer class="policy__sign">
+          <p>Signed by Adjudo, hash-chained</p>
+          <p class="num">sha256 814e…a26f</p>
+        </footer>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- 2 · one claim, start to finish -->
+<section class="journey" aria-labelledby="journey-title">
+  <div class="container journey__grid">
+    <div class="journey__pin">
+      <h2 id="journey-title">One claim, start to finish.</h2>
+      <ol class="journey__index" aria-label="Stages">
+        <li data-index="1">Documents in</li>
+        <li data-index="2">Policy applied</li>
+        <li data-index="3">Decision signed</li>
+        <li data-index="4">Portal filled</li>
+        <li data-index="5">Query answered</li>
+      </ol>
+    </div>
+
+    <ol class="journey__steps">
+      <li class="step" data-step="1">
+        <h3>Documents in</h3>
+        <p>Policy, bill, discharge summary and pre-auth letter, as PDFs or photos.</p>
+        <figure class="panel">
+          <ul class="files">
+            <li><b>Policy schedule</b><span>PDF</span></li>
+            <li><b>Final bill, itemised</b><span>PDF</span></li>
+            <li><b>Discharge summary</b><span>Photo, English and Hindi</span></li>
+            <li><b>Pre-auth approval letter</b><span>PDF</span></li>
+          </ul>
+        </figure>
+      </li>
+      <li class="step" data-step="2">
+        <h3>Policy applied</h3>
+        <p>The engine walks the bill against the policy, rule by rule. Same inputs, same number.</p>
+        <figure class="panel">
+          <table class="walk">
+            <thead><tr><th scope="col">Line</th><th scope="col">Rule</th><th scope="col" class="r">Result</th></tr></thead>
+            <tbody>
+              <tr><td>Room rent</td><td>§3.2(a) cap ₹8,000 a day</td><td class="r cut num">−₹24,000</td></tr>
+              <tr><td>Consumables</td><td>§4.1 prorated to room</td><td class="r cut num">−₹7,100</td></tr>
+              <tr><td>MRI</td><td>§5.3 within sub-limit</td><td class="r num">passes</td></tr>
+              <tr><td>Co-payment</td><td>§2.4 plan schedule</td><td class="r cut num">−₹5,000</td></tr>
+            </tbody>
+          </table>
+        </figure>
+      </li>
+      <li class="step" data-step="3">
+        <h3>Decision signed</h3>
+        <p>Approve, query or deny, written to a signed, hash-chained audit row.</p>
+        <figure class="panel panel--record">
+          <dl class="record">
+            <div><dt>Decision</dt><dd>Approved with deductions</dd></div>
+            <div><dt>Amount</dt><dd class="num">₹1,11,700 of ₹1,48,800</dd></div>
+            <div><dt>Clauses</dt><dd>§3.2(a), §4.1, §2.4</dd></div>
+            <div><dt>Previous row</dt><dd class="num">6cf5…3cbc</dd></div>
+            <div><dt>This row</dt><dd class="num">814e…a26f</dd></div>
+          </dl>
+        </figure>
+      </li>
+      <li class="step" data-step="4">
+        <h3>Portal filled</h3>
+        <p>The Copilot, a Chrome extension, types it into the insurer or TPA portal. You submit.</p>
+        <figure class="panel panel--portal">
+          <div class="portal">
+            <p class="portal__bar">Insurer portal, pre-auth 100247</p>
+            <div class="portal__form">
+              <label>Decision<input value="Approved with deductions" readonly tabindex="-1"></label>
+              <label>Admissible amount<input value="₹1,11,700" readonly tabindex="-1"></label>
+              <label>Clauses cited<input value="§3.2(a), §4.1, §2.4" readonly tabindex="-1"></label>
+            </div>
+            <p class="portal__note">Filled by the Copilot, 3 fields, waiting for your submit</p>
+          </div>
+        </figure>
+      </li>
+      <li class="step" data-step="5">
+        <h3>Query answered</h3>
+        <p>When the insurer asks why, Adjudo drafts the reply with the clause that answers it.</p>
+        <figure class="panel">
+          <div class="thread">
+            <p class="thread__q"><b>Insurer query</b>Why was room rent reduced on claim 100247?</p>
+            <p class="thread__a"><b>Draft reply</b>Room rent is payable up to ₹8,000 a day under §3.2(a). The final bill charges ₹14,000 a day for four days, so ₹24,000 is not admissible. Attached: policy schedule, bill line 1.</p>
+          </div>
+        </figure>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<!-- 3 · the record -->
+<section class="record-band" id="record" aria-labelledby="record-title">
+  <div class="container">
+    <div class="record-band__head">
+      <h2 id="record-title">Change one rupee and the chain breaks.</h2>
+      <p class="lead">Every decision writes a signed row that carries the hash of the row before it. Try it.</p>
+    </div>
+
+    <div class="chain" data-chain>
+      <table class="chain__table">
+        <caption class="visually-hidden">The audit chain for four sample claims</caption>
+        <thead><tr><th scope="col">Row</th><th scope="col">Claim</th><th scope="col">Decision</th><th scope="col" class="r">Amount</th><th scope="col">Previous hash</th><th scope="col">Row hash</th><th scope="col">Check</th></tr></thead>
+        <tbody>
+          <tr data-row="0" data-claim="100241" data-decision="Approved" data-amount="₹82,400"><td data-label="Row" class="num">1</td><td data-label="Claim" class="num">100241</td><td data-label="Decision">Approved</td><td data-label="Amount" class="r num amt">₹82,400</td><td data-label="Previous hash" class="num prev">0000…0000</td><td data-label="Row hash" class="num hash">6cf5…3cbc</td><td data-label="Check" class="ok">verified</td></tr>
+          <tr data-row="1" data-claim="100247" data-decision="Approved with deductions" data-amount="₹1,11,700"><td data-label="Row" class="num">2</td><td data-label="Claim" class="num">100247</td><td data-label="Decision">Approved with deductions</td><td data-label="Amount" class="r num amt">₹1,11,700</td><td data-label="Previous hash" class="num prev">6cf5…3cbc</td><td data-label="Row hash" class="num hash">814e…a26f</td><td data-label="Check" class="ok">verified</td></tr>
+          <tr data-row="2" data-claim="100251" data-decision="Query raised" data-amount="₹0"><td data-label="Row" class="num">3</td><td data-label="Claim" class="num">100251</td><td data-label="Decision">Query raised</td><td data-label="Amount" class="r num amt">₹0</td><td data-label="Previous hash" class="num prev">814e…a26f</td><td data-label="Row hash" class="num hash">62f4…0dcb</td><td data-label="Check" class="ok">verified</td></tr>
+          <tr data-row="3" data-claim="100258" data-decision="Approved" data-amount="₹46,900"><td data-label="Row" class="num">4</td><td data-label="Claim" class="num">100258</td><td data-label="Decision">Approved</td><td data-label="Amount" class="r num amt">₹46,900</td><td data-label="Previous hash" class="num prev">62f4…0dcb</td><td data-label="Row hash" class="num hash">b2de…f2ba</td><td data-label="Check" class="ok">verified</td></tr>
+        </tbody>
+      </table>
+      <div class="chain__controls">
+        <button type="button" class="btn btn--on-field" data-tamper>Add ₹10,000 to claim 100247</button>
+        <button type="button" class="btn btn--quiet-field" data-restore hidden>Put it back</button>
+        <p class="chain__status" role="status" aria-live="polite">All 4 rows verify against the chain.</p>
+      </div>
+    </div>
+
+    <p class="chain__law">Signed with HMAC-SHA256. UPDATE and DELETE are revoked at the database role.</p>
+
+    <div class="runs runs__grid" aria-labelledby="runs-title">
+    <div class="runs__head">
+      <h3 id="runs-title">It runs where the data has to stay.</h3>
+      <ul class="deploy">
+        <li><b>Cloud</b>AWS ap-south-1, India</li>
+        <li><b>Single tenant</b>Your own VPC</li>
+        <li><b>On-prem</b>Air-gapped on one GPU appliance</li>
+      </ul>
+      <p class="runs__note">We never train on your claims without your opt-in.</p>
+    </div>
+    <table class="posture">
+      <caption class="visually-hidden">Compliance posture</caption>
+      <thead><tr><th scope="col">Standard</th><th scope="col">Where we are</th></tr></thead>
+      <tbody>
+        <tr><th scope="row">IRDAI</th><td><b>Audit-grade</b>Signed, chained, kept 8 years.</td></tr>
+        <tr><th scope="row">DPDP Act</th><td><b>Aligned</b>Data stays in India by default.</td></tr>
+        <tr><th scope="row">NABH</th><td><b>Aligned</b>Patient-data access logged per request.</td></tr>
+        <tr><th scope="row">ISO 27001</th><td><b>In progress</b>Certification expected in 2027.</td></tr>
+      </tbody>
+    </table>
+  </div>
+  </div>
+</section>
+
+<!-- 4 · three desks -->
+<section class="desks" id="desks" aria-labelledby="desks-title">
+  <div class="container">
+    <div class="desks__head">
+      <h2 id="desks-title">The same decision, from three desks.</h2>
+      <div class="seg" role="tablist" aria-label="Choose a desk">
+        <button type="button" role="tab" id="t-ins" aria-controls="p-ins" aria-selected="true">Insurers</button>
+        <button type="button" role="tab" id="t-tpa" aria-controls="p-tpa" aria-selected="false" tabindex="-1">TPAs</button>
+        <button type="button" role="tab" id="t-hos" aria-controls="p-hos" aria-selected="false" tabindex="-1">Hospitals</button>
+      </div>
+    </div>
+
+    <div class="desk-panel" role="tabpanel" id="p-ins" aria-labelledby="t-ins">
+      <div class="desk-panel__text">
+        <h3>Stop the leakage before payment.</h3>
+        <p>Room-rent caps, sub-limits and NPPA price ceilings, applied the same way on every claim.</p>
+        <p class="result"><b class="num">−9.2%</b><span>leakage caught at a Tier-1 insurer in Hyderabad</span></p>
+        <a class="link" href="#close">How insurers run a pilot</a>
+      </div>
+      <figure class="view">
+        <p class="view__title">Caught on claim 100247</p>
+        <table class="view__table"><tbody>
+          <tr><td>Room rent above the cap</td><td>§3.2(a)</td><td class="r num">₹24,000</td></tr>
+          <tr><td>Consumables above the room tier</td><td>§4.1</td><td class="r num">₹7,100</td></tr>
+          <tr><td>Co-payment not applied</td><td>§2.4</td><td class="r num">₹5,000</td></tr>
+          <tr class="sum"><td>Kept from leaking</td><td></td><td class="r num">₹36,100</td></tr>
+        </tbody></table>
+      </figure>
+    </div>
+
+    <div class="desk-panel" role="tabpanel" id="p-tpa" aria-labelledby="t-tpa" hidden>
+      <div class="desk-panel__text">
+        <h3>Clear the cashless queue by noon.</h3>
+        <p>Each officer gets the decision with its clauses. One click approves or overrides, and both are logged.</p>
+        <p class="result"><b class="num">−71%</b><span>pre-auth turnaround at a national TPA in Pune, with the same headcount</span></p>
+        <a class="link" href="#close">How TPAs run a pilot</a>
+      </div>
+      <figure class="view">
+        <p class="view__title">Mean pre-auth turnaround</p>
+        <div class="bars">
+          <div class="bar"><span>Before</span><i style="--w: 100%"></i><b class="num">4.5 hrs</b></div>
+          <div class="bar bar--after"><span>With Adjudo</span><i style="--w: 29%"></i><b class="num">1.3 hrs</b></div>
+        </div>
+        <p class="view__note">The same team handled six times the cashless queue.</p>
+      </figure>
+    </div>
+
+    <div class="desk-panel" role="tabpanel" id="p-hos" aria-labelledby="t-hos" hidden>
+      <div class="desk-panel__text">
+        <h3>See the cuts before you submit.</h3>
+        <p>Your bill runs through the engine the TPA will use. Fix what will fall; defend the rest.</p>
+        <p class="result"><b class="num">↓41%</b><span>disputed lines, with first-pass approval up 22%</span></p>
+        <a class="link" href="#close">How hospitals run a pilot</a>
+      </div>
+      <figure class="view">
+        <p class="view__title">Before submission, claim 100247</p>
+        <table class="view__table"><tbody>
+          <tr><td>Pharmacy and consumables</td><td>§4.1</td><td class="r">Fix the line</td></tr>
+          <tr><td>Room rent, single room</td><td>§3.2(a)</td><td class="r">Counter drafted</td></tr>
+          <tr><td>Investigations, MRI</td><td>§5.3</td><td class="r">Passes</td></tr>
+        </tbody></table>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- 5 · the evaluation -->
+<section class="proof" aria-labelledby="proof-title">
+  <div class="container proof__grid">
+    <p class="proof__figure num">98.94%</p>
+    <div class="proof__text">
+      <h2 id="proof-title">Decision accuracy, measured on 3,234 real claims.</h2>
+      <p>Real Indian adjudications, not synthetic ones. Reviewers work eight times faster, and every decision is cited and signed.</p>
+    </div>
+  </div>
+</section>
+
+
+<!-- 7 · the people -->
+<section class="team" id="team" aria-labelledby="team-title">
+  <div class="container team__grid">
+    <h2 id="team-title">Built in Pune and Ahmedabad.</h2>
+    <ul class="people">
+      <li><a href="#team"><b>Ashwin Vasani</b><span>Founder and CEO</span></a></li>
+      <li><a href="https://www.linkedin.com/in/dr-mahesh-patel-7270786/"><b>Dr Mahesh Patel</b><span>Co-founder, clinical and insurance</span></a></li>
+    </ul>
+    <div class="team__hiring">
+      <p>Engineers from regulated infrastructure and adjudicators who have cut claims for a living. Eight roles open.</p>
+      <a class="link" href="#team">See the open roles</a>
+    </div>
+  </div>
+</section>
+
+<!-- 8 · the close -->
+<section class="close" id="close" aria-labelledby="close-title">
+  <div class="container close__grid">
+    <div class="close__text">
+      <h2 id="close-title">Send us one claim.</h2>
+      <p class="lead">De-identify it and we will adjudicate it live with you on the call.</p>
+      <p class="close__terms">Priced per claim, not per seat. Every engagement starts with a paid pilot of 30 to 60 days.</p>
+    </div>
+    <form class="signup" data-endpoint="" novalidate>
+      <label for="email">Work email</label>
+      <input id="email" name="email" type="email" autocomplete="email" required>
+      <fieldset class="org">
+        <legend>Your organisation</legend>
+        <div class="org__keys">
+          <input type="radio" name="org" id="o1" value="insurer" checked><label for="o1">Insurer</label>
+          <input type="radio" name="org" id="o2" value="tpa"><label for="o2">TPA</label>
+          <input type="radio" name="org" id="o3" value="hospital"><label for="o3">Hospital</label>
+        </div>
+      </fieldset>
+      <button class="btn" type="submit">Join the waitlist</button>
+      <p class="signup__help" id="email-help" aria-live="polite"></p>
+    </form>
+  </div>
+</section>
+</main>
+
+<footer class="footer">
+  <div class="container footer__grid">
+    <div class="footer__mast">
+      <p class="wordmark wordmark--lg">adjudo</p>
+      <p>Made by hand, signed by machine.</p>
+    </div>
+    <nav class="footer__cols" aria-label="Footer">
+      <ul><li><a href="#desks">Insurers</a></li><li><a href="#desks">TPAs</a></li><li><a href="#desks">Hospitals</a></li><li><a href="#hero-title">Healthcare</a></li></ul>
+      <ul><li><a href="#journey-title">Copilot</a></li><li><a href="#close">Pricing</a></li><li><a href="#record">Security</a></li><li><a href="#close">Waitlist</a></li></ul>
+      <ul><li><a href="#team">About</a></li><li><a href="#team">Careers</a></li><li><a href="mailto:hello@adjudoai.com">Contact</a></li><li><a href="#">Privacy</a></li></ul>
+    </nav>
+    <p class="footer__legal">© 2026 Adjudo AI, Pune and Ahmedabad. <a href="https://www.linkedin.com/company/adjudo-ai/">LinkedIn</a></p>
+  </div>
+</footer>
+
+<script src="app.js" defer></script>
+</body>
+</html>
