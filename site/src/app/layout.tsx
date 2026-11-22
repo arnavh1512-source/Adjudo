@@ -1,7 +1,6 @@
 import type { Metadata, Viewport } from 'next';
 import './globals.css';
 import '../styles/chrome.css';
-import '../styles/claim.css';
 import { Providers } from './providers';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
@@ -16,20 +15,21 @@ export const metadata: Metadata = {
   icons: { icon: '/icon.svg' },
 };
 
-export const viewport: Viewport = { themeColor: '#121a33' };
+export const viewport: Viewport = { themeColor: '#f6f3f0' };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en-IN">
+    <html lang="en-IN" suppressHydrationWarning>
       <head>
-        <link rel="preconnect" href="https://api.fontshare.com" />
-        <link rel="preconnect" href="https://cdn.fontshare.com" crossOrigin="" />
-        <link rel="stylesheet" href="https://api.fontshare.com/v2/css?f[]=clash-grotesk@500,600&f[]=switzer@400,500&f[]=gambetta@400&display=swap" />
+        <link rel="preload" href="/fonts/general-sans-600.woff2" as="font" type="font/woff2" crossOrigin="" />
         <script dangerouslySetInnerHTML={{ __html: "document.documentElement.classList.add('js')" }} />
       </head>
       <body>
         <a className="skip" href="#main">Skip to content</a>
         <Providers>
+          <svg width="0" height="0" aria-hidden="true" focusable="false" style={{ position: 'absolute' }}>
+            <filter id="press"><feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="1" seed="3" result="n" /><feColorMatrix in="n" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 -0.9 1.55" result="mask" /><feComposite in="SourceGraphic" in2="mask" operator="in" result="ink" /><feOffset in="SourceAlpha" dx="0.6" dy="0.8" result="o" /><feComposite in="o" in2="SourceAlpha" operator="out" result="wall" /><feFlood floodColor="currentColor" floodOpacity="0.35" /><feComposite in2="wall" operator="in" result="shade" /><feMerge><feMergeNode in="ink" /><feMergeNode in="shade" /></feMerge></filter>
+          </svg>
           <Header />
           <main id="main">{children}</main>
           <Footer />

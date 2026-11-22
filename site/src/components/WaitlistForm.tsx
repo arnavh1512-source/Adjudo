@@ -38,7 +38,7 @@ export function WaitlistForm({ id = 'waitlist' }: { id?: string }) {
   }
 
   return (
-    <form id={id} className="waitlist" onSubmit={submit} noValidate>
+    <form id={id} className="waitlist astryx-scope stock" onSubmit={submit} noValidate>
       <TextInput label="Work email" type="email" value={email} onChange={(v) => setEmail(v)} placeholder="you@company.com" isRequired htmlName="email"
         status={status?.tone === 'error' ? { type: 'error', message: status.text } : undefined} />
       <TextInput label="Organisation" value={company} onChange={(v) => setCompany(v)} placeholder="Company name" isOptional htmlName="company" />

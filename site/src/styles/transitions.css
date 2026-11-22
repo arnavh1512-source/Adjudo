@@ -11,6 +11,8 @@
   --stagger-dur: 500ms; --stagger-distance: 12px; --stagger-stagger: 40ms; --stagger-blur: 3px; --stagger-ease: cubic-bezier(0.22, 1, 0.36, 1);
   /* 21 accordion */
   --acc-expand: 250ms; --acc-collapse: 250ms; --acc-chevron: 250ms; --acc-ease: cubic-bezier(0.22, 1, 0.36, 1);
+  /* 16 tabs sliding */
+  --tabs-dur: 250ms; --tabs-ease: cubic-bezier(0.22, 1, 0.36, 1);
   /* 24 learn more hover */
   --learn-shift: 2px; --learn-spread: 8deg; --learn-in: 350ms; --learn-out: 350ms; --learn-ease: cubic-bezier(0.22, 1, 0.36, 1);
 }
@@ -47,7 +49,13 @@
 .t-learn:hover .t-learn-arm-top, .t-learn:focus-visible .t-learn-arm-top { transform: rotate(var(--learn-spread)); }
 .t-learn:hover .t-learn-arm-bot, .t-learn:focus-visible .t-learn-arm-bot { transform: rotate(calc(var(--learn-spread) * -1)); }
 
+/* 16 · tabs sliding: the pill rides between stops. Adapted to move with transform only (translateX + scaleX), never width. */
+.t-tabs { position: relative; display: inline-flex; align-items: center; gap: var(--space-2xs); padding: var(--space-2xs); }
+.t-tab { position: relative; z-index: 1; transition: color var(--tabs-dur) var(--tabs-ease); }
+.t-tabs-pill { position: absolute; top: var(--space-2xs); bottom: var(--space-2xs); left: 0; width: 100px; transform-origin: left center; transform: translateX(0) scaleX(0); transition: transform var(--tabs-dur) var(--tabs-ease); pointer-events: none; z-index: 0; }
+
 @media (prefers-reduced-motion: reduce) {
+  .t-tabs-pill, .t-tab { transition: none !important; }
   .t-dropdown, .t-stagger-line, .t-acc-panel, .t-acc-panel-inner, .t-acc-chevron, .t-learn-chevron, .t-learn-arm { transition: none !important; }
   .js .t-stagger .t-stagger-line { opacity: 1; transform: none; filter: none; }
 }
