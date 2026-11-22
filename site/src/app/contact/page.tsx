@@ -38,10 +38,10 @@ export default function Contact() {
       </section>
 
       <section className="section section--paper2" aria-labelledby="con-offices-title">
-        <div className="container">
-          <div className="head">
+        <div className="container con-offices-grid">
+          <div className="con-offices__text">
             <h2 id="con-offices-title">Pune and Ahmedabad.</h2>
-            <p>Engineering and research sit in two cities, close to the claims officers we build with.</p>
+            <p className="lead">Engineering and research sit in two cities, close to the claims officers we build with.</p>
           </div>
           <dl className="con-offices">
             {offices.map((o) => (

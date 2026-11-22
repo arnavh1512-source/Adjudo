@@ -3,6 +3,8 @@
  * axes: light/grotesk-sans/warm · posture: restrained · contrast: pass · fold: pass · v2.0.0 */
 /* Hallmark · pre-emit critique: P4 H4 E4 S4 R5 V4 · weakest: S, a legal page has no picture to carry it, so measure, leading and a held contents column do the work */
 
+/* Hallmark · waive 26b · the legal text has no form control or disabled state · its only interactive elements are links with hover, focus-visible and active states */
+/* Hallmark · waive 78 · section heads are numbered clause titles inside a 70ch legal document · a 52px head over body text at 16px would break the reading measure, so they stand at --text-xl */
 .leg-sec h2 { text-wrap: balance; }
 .leg-body a:focus-visible { outline: 2px solid var(--color-focus); outline-offset: 2px; }
 .leg-toc a:active { opacity: 0.7; }

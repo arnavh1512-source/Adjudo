@@ -28,7 +28,7 @@ export default function Pricing() {
         lead="Pricing scales with volume. Every engagement starts with a paid pilot."
       />
 
-      <section className="section section--s" aria-labelledby="pr-plans-title">
+      <section className="pr-sec" aria-labelledby="pr-plans-title">
         <div className="container">
           <h2 id="pr-plans-title" className="visually-hidden">Plans</h2>
           <Plans />

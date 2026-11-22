@@ -4,6 +4,9 @@
 /* Hallmark · pre-emit critique: P4 H4 E4 S4 R5 V4 · weakest: S, a contact page is mostly addresses, so each channel is a ruled row and the form is the one sheet on the page */
 
 
+/* Hallmark · waive 26b · the channels and offices have no form control or disabled state · their only interactive elements are mailto links with hover, focus-visible and active states */
+/* Hallmark · waive 85 · the visitor came to make contact and the brief for this route ends on the waitlist form · the form is the page's job, not a newsletter close */
+/* Hallmark · waive 39b · the contact waitlist form uses the shared WaitlistForm Astryx inputs, whose wrapper fields give the controls their hit area · the page does not size them */
 .con-channels { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: var(--space-3xl); align-items: start; }
 .con-channels h2 { max-width: 9ch; text-wrap: balance; }
 .con-channels__list { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--color-ink); }
@@ -14,9 +17,12 @@
 .con-channels__list .link:active { opacity: 0.7; }
 .con-channels__list .link { display: inline-flex; align-items: center; min-height: 44px; overflow-wrap: anywhere; }
 
+.con-offices-grid { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: var(--space-3xl); align-items: start; }
+.con-offices__text h2 { max-width: 9ch; text-wrap: balance; }
+.con-offices__text .lead { margin-top: var(--space-lg); color: var(--color-ink-2); max-width: 34ch; }
 .con-offices { margin: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--space-xl); border-top: 1px solid var(--color-ink); }
-.con-offices > div { display: grid; gap: var(--space-xs); padding-block: var(--space-lg); }
-.con-offices dt { font: 600 var(--text-2xl)/1.1 var(--font-display); letter-spacing: -0.02em; }
+.con-offices > div { display: grid; gap: var(--space-xs); padding-block: var(--space-xl) var(--space-2xl); }
+.con-offices dt { font: 600 var(--text-3xl)/1.1 var(--font-display); letter-spacing: -0.02em; }
 .con-offices dd { margin: 0; color: var(--color-ink-2); }
 .con-offices .con-offices__region { color: var(--color-muted); font-size: var(--text-sm); }
 
@@ -29,7 +35,7 @@
 .con-wait .waitlist__status.is-ok { color: var(--color-ink); font-weight: 500; }
 
 @media (max-width: 60rem) {
-  .con-channels, .con-wait__grid { grid-template-columns: minmax(0, 1fr); gap: var(--space-2xl); }
+  .con-channels, .con-wait__grid, .con-offices-grid { grid-template-columns: minmax(0, 1fr); gap: var(--space-2xl); }
   .con-wait .waitlist { transform: none; }
 }
 @media (max-width: 40rem) {

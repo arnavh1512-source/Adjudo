@@ -2,6 +2,7 @@
  * hero: Banner · nav: banner over a retracting bar · footer: colophon block · imagery: the product, built as stationery · signature: the Copilot filling a portal form on cotton, once, in view
  * axes: light/grotesk-sans/warm · posture: restrained · contrast: pass · fold: pass · v2.0.0 */
 /* Hallmark · pre-emit critique: P4 H4 E4 S4 R4 V4 · weakest: S, the index is plain type, so the copilot form and the settlement letter carry the page and the ROI figure is the one big move */
+/* Hallmark · waive 26b · AnimatedNumber is a span that shows a figure, not a control · it has no disabled or active state to style */
 :root {
   --stream-gap: 45ms; --stream-fade: 350ms; --stream-blur: 1px; --stream-ease: cubic-bezier(0.22, 1, 0.36, 1);
   --subtle-dur: 455ms; --subtle-distance: 0.14em; --subtle-blur: 0.042em; --subtle-ease: cubic-bezier(0.22, 1, 0.36, 1);
@@ -123,3 +124,10 @@ html:not(.js) .hc-switch__bar { display: none; }
   .hc-compare th, .hc-compare td { padding: var(--space-2xs) 0 !important; border: 0 !important; }
   .hc-compare td::before { content: attr(data-label); display: block; font-size: var(--text-sm); font-weight: 500; color: var(--color-muted); }
 }
+
+.hc-copilot__text h2, .hc-roi__main h2 { text-wrap: balance; }
+.hc-range:active::-webkit-slider-thumb { transform: translateY(1px); }
+.hc-range:active::-moz-range-thumb { transform: translateY(1px); }
+.hc-roi__main .btn:focus-visible { outline: 2px solid var(--color-board-type); outline-offset: 3px; }
+
+.hc-switch__bar .astryx-segmented-control-item { min-height: 44px; }

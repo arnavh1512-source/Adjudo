@@ -2,6 +2,7 @@
  * hero: Banner · nav: banner over a retracting bar · footer: colophon block · imagery: the product, built as stationery · signature: Growth held in an ink outline, the three plans' buttons on one line
  * axes: light/grotesk-sans/warm · posture: restrained · contrast: pass · fold: pass · v2.0.0 */
 /* Hallmark · pre-emit critique: P4 H4 E4 S3 R4 V4 · weakest: S, plans are type and hairlines only, since Adjudo publishes no prices to set big */
+/* Hallmark · waive 39b · button.t-acc-head is a whole question row at 72px · rows in the Rows composition stand 72 to 120px and the head is the row */
 
 .pr-plans { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--gap-columns); align-items: stretch; }
 .pr-plan { display: flex; flex-direction: column; gap: var(--space-lg); padding: var(--space-lg); border: 1px solid transparent; border-top-color: var(--color-ink); }
@@ -34,3 +35,9 @@
   .pr-plans { grid-template-columns: minmax(0, 1fr); }
   .pr-faq { grid-template-columns: minmax(0, 1fr); gap: var(--space-2xl); }
 }
+
+.pr-sec { padding-block: var(--space-xl) var(--section-gap-s); }
+.page-hero + .pr-sec { padding-top: var(--space-xl); }
+.pr-faq h2, .pr-close h2 { text-wrap: balance; }
+.pr-plan__foot .btn:focus-visible { outline: 2px solid var(--color-focus); outline-offset: 3px; }
+.pr-plan__foot .btn:active { transform: translateY(1px); }

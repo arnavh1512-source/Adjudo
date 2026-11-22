@@ -95,7 +95,7 @@ export function WorkflowSwitcher() {
   return (
     <div className="hc-switch">
       <div className="hc-switch__bar astryx-scope">
-        <SegmentedControl label="Workflow" value={active} onChange={setActive}>
+        <SegmentedControl label="Workflow" size="lg" value={active} onChange={setActive}>
           {workflows.map((w) => <SegmentedControlItem key={w.id} value={w.id} label={w.tab} />)}
         </SegmentedControl>
       </div>

@@ -30,7 +30,7 @@ export function CopilotForm() {
   let i = 0;
   return (
     <figure ref={ref} className={`hc-form stock${inView ? ' is-in' : ''}`}>
-      <p className="hc-form__title">Pre-authorization request</p>
+      <p className="hc-form__title">New pre-auth</p>
       <dl className="hc-form__fields">
         {rows.map((r) => (
           <div key={r.label}>
