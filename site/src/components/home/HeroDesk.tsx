@@ -47,7 +47,7 @@ export function HeroDesk() {
         <div className="sheet__sign"><span className="pressed">Signed</span><span className="fig">814e…a26f</span></div>
       </div>
       <div className="clause-card stock" aria-hidden="true">
-        <p className="clause-card__tab">§3.2(a)</p>
+        <p className="clause-card__tab">§3.2(a), cited for room rent</p>
         <p>Room rent is payable up to ₹8,000 a day for a single private room.</p>
       </div>
     </div>

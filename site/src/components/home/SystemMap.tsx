@@ -19,12 +19,13 @@ export function SystemMap() {
     const rect = (id: string) => r.querySelector<HTMLElement>(`[data-node="${id}"]`)!.getBoundingClientRect();
     const paths = edges.map(([a, b]) => {
       const A = rect(a), B = rect(b);
-      let x1, y1, x2, y2;
-      if (b === 'ledger') { x1 = A.left + A.width / 2 - box.left; y1 = A.bottom - box.top; x2 = x1; y2 = B.top - box.top; }
-      else if (a === 'hosp') { x1 = A.right - box.left; y1 = B.top + B.height / 2 - box.top; x2 = B.left - box.left; y2 = y1; }
-      else { x1 = A.right - box.left; y1 = A.top + A.height / 2 - box.top; x2 = B.left - box.left; y2 = B.top + B.height / 2 - box.top; }
+      if (b === 'ledger') { const x = A.left + A.width / 2 - box.left; return `M${x},${A.bottom - box.top} L${x},${B.top - box.top}`; }
+      const L = a === 'hosp' ? A : A, R = B;
+      const x1 = L.right - box.left, y1 = L.top + L.height / 2 - box.top;
+      const x2 = R.left - box.left, y2 = R.top + R.height / 2 - box.top;
+      if (Math.abs(y1 - y2) < 2) return `M${x1},${y1} L${x2},${y2}`;
       const mx = (x1 + x2) / 2;
-      return b === 'ledger' ? `M${x1},${y1} L${x2},${y2}` : `M${x1},${y1} C${mx},${y1} ${mx},${y2} ${x2},${y2}`;
+      return `M${x1},${y1} C${mx},${y1} ${mx},${y2} ${x2},${y2}`;
     });
     s.querySelectorAll('path').forEach((p, i) => p.setAttribute('d', paths[i]));
   }, []);
@@ -67,6 +68,9 @@ export function SystemMap() {
           <h3>Insurer</h3>
           <p>Pays against the decision. When it asks why, the reply comes with the clause.</p>
           <Link className="link" href="/solutions/payers">For insurers</Link>
+        </li>
+        <li className="map__legend" aria-hidden="true">
+          <p>The dashed lines carry the paperwork: the bill and discharge summary in, the cited decision out to the TPA and insurer, the signed row down to the ledger.</p>
         </li>
         <li className="map__node map__node--ledger stock" data-node="ledger" style={{ ['--i' as string]: 4 }}>
           <h3>Audit ledger</h3>

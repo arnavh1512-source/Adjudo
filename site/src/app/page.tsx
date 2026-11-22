@@ -45,7 +45,7 @@ export default function Home() {
       </section>
 
       {/* 2 · the map: where Adjudo sits */}
-      <section className="section" aria-labelledby="map-title">
+      <section className="section desk map-band" aria-labelledby="map-title">
         <div className="container">
           <div className="head">
             <h2 id="map-title">Three desks, one decision, one ledger.</h2>
@@ -126,15 +126,29 @@ export default function Home() {
           <div className="pricing">
             <table className="table pricing__table">
               <caption className="visually-hidden">Adjudo plans</caption>
-              <thead><tr><th scope="col"><span className="visually-hidden">Plan detail</span></th>{tiers.map((t) => (<th key={t.name} scope="col" className="pricing__plan">{t.name}{t.name === 'Growth' ? <span className="pricing__note">Most chosen</span> : null}</th>))}</tr></thead>
+              <thead><tr><th scope="col"><span className="visually-hidden">Plan detail</span></th>{tiers.map((t) => (<th key={t.name} scope="col" className={`pricing__plan${t.name === 'Growth' ? ' is-featured' : ''}`}>{t.name}{t.name === 'Growth' ? <span className="pricing__note">Most chosen</span> : null}</th>))}</tr></thead>
               <tbody>
-                <tr><th scope="row">For</th>{tiers.map((t) => <td key={t.name}>{t.for}</td>)}</tr>
-                <tr><th scope="row">Volume</th>{tiers.map((t) => <td key={t.name}>{t.volume}</td>)}</tr>
-                <tr><th scope="row">Workflows</th>{tiers.map((t) => <td key={t.name}>{t.flows}</td>)}</tr>
-                <tr><th scope="row">Deployment</th>{tiers.map((t) => <td key={t.name}>{t.deploy}</td>)}</tr>
-                <tr><th scope="row">Support</th>{tiers.map((t) => <td key={t.name}>{t.support}</td>)}</tr>
+                <tr><th scope="row">For</th>{tiers.map((t) => <td key={t.name} className={t.name === 'Growth' ? 'is-featured' : undefined}>{t.for}</td>)}</tr>
+                <tr><th scope="row">Volume</th>{tiers.map((t) => <td key={t.name} className={t.name === 'Growth' ? 'is-featured' : undefined}>{t.volume}</td>)}</tr>
+                <tr><th scope="row">Workflows</th>{tiers.map((t) => <td key={t.name} className={t.name === 'Growth' ? 'is-featured' : undefined}>{t.flows}</td>)}</tr>
+                <tr><th scope="row">Deployment</th>{tiers.map((t) => <td key={t.name} className={t.name === 'Growth' ? 'is-featured' : undefined}>{t.deploy}</td>)}</tr>
+                <tr><th scope="row">Support</th>{tiers.map((t) => <td key={t.name} className={t.name === 'Growth' ? 'is-featured' : undefined}>{t.support}</td>)}</tr>
               </tbody>
             </table>
+            <ol className="plans" aria-label="Adjudo plans">
+              {tiers.map((t) => (
+                <li key={t.name} className={`plans__item${t.name === 'Growth' ? ' is-featured' : ''}`}>
+                  <h3>{t.name}{t.name === 'Growth' ? <span className="pricing__note">Most chosen</span> : null}</h3>
+                  <dl>
+                    <div><dt>For</dt><dd>{t.for}</dd></div>
+                    <div><dt>Volume</dt><dd>{t.volume}</dd></div>
+                    <div><dt>Workflows</dt><dd>{t.flows}</dd></div>
+                    <div><dt>Deployment</dt><dd>{t.deploy}</dd></div>
+                    <div><dt>Support</dt><dd>{t.support}</dd></div>
+                  </dl>
+                </li>
+              ))}
+            </ol>
             <p className="pricing__more"><Link className="link" href="/pricing">Full plan details</Link></p>
           </div>
         </div>
@@ -143,7 +157,7 @@ export default function Home() {
       {/* 7 · questions as rows */}
       <section className="section" aria-labelledby="faq-title">
         <div className="container faq">
-          <h2 id="faq-title">Questions we hear first.</h2>
+          <h2 id="faq-title">Audit, data and rollout, answered.</h2>
           <Questions items={questions} />
         </div>
       </section>

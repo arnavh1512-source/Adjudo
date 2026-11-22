@@ -4,6 +4,9 @@
 /* Hallmark · pre-emit critique: P4 H5 E4 S4 R5 V4 · weakest: S, a diagram of desks could fit any claims tool, so every node carries Adjudo's own documents (bill, discharge summary, cited decision, signed row) and links to that desk's page */
 /* Hallmark · waive 39b · button.t-acc-head is a whole question row at 72px · rows in the Rows composition stand 72 to 120px and the head is the row */
 /* Hallmark · answered F4 · the card button is Coral's letterpress secondary, the ink card is the one primary on every screen */
+/* Hallmark · dismissed F20 · the lone item on the map's last row is the legend, placed in the empty quadrant on purpose */
+/* Hallmark · dismissed 25 · the map legend is one sentence, a caption, set at 30ch beside the ledger card */
+/* Hallmark · finish-review: subagent · 8 findings · 7 resolved, 1 declined (finding 7b: "Made by hand, signed by machine." is the client's own line, kept as found) · gap: the paperwork idea continues into the map band on the desk ground */
 /* Hallmark · swapped from the draw: pricing has no period switch because Adjudo publishes no prices; it is a three-tier table instead */
 @import "@astryxdesign/core/reset.css";
 @import "@astryxdesign/core/astryx.css";
@@ -18,7 +21,7 @@
 
 :root {
   /* Coral textures, generated (no image requests): cotton fibre on stock, felt on the desk */
-  --tex-cotton: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='360' height='360'%3E%3Cfilter id='c'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.011' numOctaves='2' seed='4' result='a'/%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.92' numOctaves='1' seed='9' result='b'/%3E%3CfeBlend in='a' in2='b' mode='multiply'/%3E%3CfeColorMatrix values='0 0 0 0 0.42 0 0 0 0 0.36 0 0 0 0 0.3 0 0 0 0.05 0'/%3E%3C/filter%3E%3Crect width='360' height='360' filter='url(%23c)'/%3E%3C/svg%3E");
+  --tex-cotton: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='360' height='360'%3E%3Cfilter id='c'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.011' numOctaves='2' seed='4' result='a'/%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.92' numOctaves='1' seed='9' result='b'/%3E%3CfeBlend in='a' in2='b' mode='multiply'/%3E%3CfeColorMatrix values='0 0 0 0 0.42 0 0 0 0 0.36 0 0 0 0 0.3 0 0 0 0.09 0'/%3E%3C/filter%3E%3Crect width='360' height='360' filter='url(%23c)'/%3E%3C/svg%3E");
   --tex-desk: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='360' height='360'%3E%3Cfilter id='f'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.018' numOctaves='3' seed='2'/%3E%3CfeColorMatrix values='0 0 0 0 0.4 0 0 0 0 0.33 0 0 0 0 0.26 0 0 0 0.07 0'/%3E%3C/filter%3E%3Crect width='360' height='360' filter='url(%23f)'/%3E%3C/svg%3E");
   --container: 1360px;
   --bar-h: 68px;
