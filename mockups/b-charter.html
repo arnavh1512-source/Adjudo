@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Adjudo · Direction B: Charter</title>
+<meta name="description" content="Direction B for the Adjudo redesign: a light, authoritative corporate system in navy and saffron.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,500&family=IBM+Plex+Sans:wght@400;500&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+/* Hallmark · theme: custom "Charter" (light corporate, navy and saffron) · genre: modern-minimal · posture: committed (navy band) · hero: Stage · signature: the decision letter with cited margins */
+:root {
+  --color-paper: oklch(98.6% 0.004 250);
+  --color-paper-2: oklch(96.2% 0.009 250);
+  --color-paper-3: oklch(93% 0.014 250);
+  --color-rule: oklch(88% 0.012 250);
+  --color-ink: oklch(23% 0.06 260);
+  --color-ink-2: oklch(36% 0.045 258);
+  --color-muted: oklch(50% 0.03 255);
+  --color-navy: oklch(27% 0.075 262);
+  --color-navy-2: oklch(33% 0.08 262);
+  --color-on-navy: oklch(97% 0.008 250);
+  --color-on-navy-muted: oklch(80% 0.03 255);
+  --color-accent: oklch(78% 0.15 72);
+  --color-accent-deep: oklch(66% 0.15 60);
+  --color-accent-soft: oklch(95% 0.045 80);
+  --color-accent-ink: oklch(25% 0.05 60);
+  --color-focus: oklch(55% 0.2 262);
+  --color-sheet: oklch(99.6% 0.002 250);
+  --color-navy-rule: oklch(40% 0.06 262);
+  --shadow-sheet: 0 1px 2px oklch(25% 0.05 260 / .06), 0 30px 60px -30px oklch(30% 0.07 260 / .3);
+  --font-display: "Newsreader", Georgia, serif;
+  --font-body: "IBM Plex Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, monospace;
+  --text-display: clamp(3rem, 5.6vw, 5.25rem);
+  --text-section: clamp(2.25rem, 3.6vw, 3.25rem);
+  --text-title: 1.5625rem; --text-lead: 1.25rem; --text-md: 1rem; --text-sm: 0.875rem;
+  --space-xs: 8px; --space-sm: 12px; --space-md: 16px; --space-lg: 24px; --space-xl: 40px; --space-2xl: 64px; --space-3xl: 96px; --space-4xl: 144px;
+  --radius-card: 6px; --radius-input: 4px;
+  --dur-micro: 120ms; --dur-short: 220ms; --ease-out: cubic-bezier(.2,.7,.2,1);
+  --container: 1312px; --gutter: 64px;
+}
+* { box-sizing: border-box; }
+html, body { overflow-x: clip; margin: 0; }
+body { background: var(--color-paper); color: var(--color-ink); font: 400 var(--text-md)/1.6 var(--font-body); -webkit-font-smoothing: antialiased; font-synthesis: none; }
+.container { max-width: calc(var(--container) + 2 * var(--gutter)); margin-inline: auto; padding-inline: var(--gutter); }
+a { color: inherit; }
+:focus-visible { outline: 2px solid var(--color-focus); outline-offset: 3px; }
+h1, h2, h3 { font-family: var(--font-display); font-weight: 500; letter-spacing: -0.02em; line-height: 1.04; margin: 0; text-wrap: balance; overflow-wrap: break-word; min-width: 0; }
+p { margin: 0; text-wrap: pretty; }
+.mono { font-family: var(--font-mono); font-variant-numeric: tabular-nums; }
+
+.nav { background: var(--color-paper); border-bottom: 1px solid var(--color-rule); }
+.nav .container { display: flex; align-items: center; gap: var(--space-xl); height: 76px; }
+.wordmark { font-family: var(--font-display); font-size: 1.625rem; letter-spacing: -0.02em; text-decoration: none; color: var(--color-navy); }
+.wordmark::after { content: "."; color: var(--color-accent-deep); }
+.nav ul { display: flex; gap: var(--space-lg); list-style: none; margin: 0; padding: 0; font-size: var(--text-sm); color: var(--color-ink-2); }
+.nav ul a { text-decoration: none; }
+.nav ul a:hover { color: var(--color-ink); text-decoration: underline; text-underline-offset: 4px; }
+.nav .end { margin-left: auto; display: flex; gap: var(--space-sm); }
+
+.btn { display: inline-flex; align-items: center; justify-content: center; min-height: 48px; padding: 0 var(--space-lg); border-radius: var(--radius-input); border: 1px solid var(--color-navy); background: var(--color-navy); color: var(--color-on-navy); font: 500 var(--text-md)/1 var(--font-body); text-decoration: none; cursor: pointer; transition: background-color var(--dur-short) var(--ease-out), transform var(--dur-micro) var(--ease-out); }
+.btn:hover { background: var(--color-navy-2); }
+.btn:active { transform: translateY(1px); }
+.btn--quiet { background: transparent; color: var(--color-ink); border-color: var(--color-rule); }
+.btn--quiet:hover { background: var(--color-paper-2); }
+.btn--sm { min-height: 40px; padding: 0 var(--space-md); font-size: var(--text-sm); }
+
+.hero { padding-block: var(--space-3xl) var(--space-4xl); background: linear-gradient(var(--color-paper), var(--color-paper-2)); }
+.hero .container { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: var(--space-3xl); align-items: center; }
+.hero h1 { font-size: var(--text-display); color: var(--color-navy); max-width: 11ch; }
+.hero .lead { margin-top: var(--space-lg); font-size: var(--text-lead); color: var(--color-ink-2); max-width: 32ch; }
+.hero .actions { margin-top: var(--space-xl); display: flex; gap: var(--space-sm); flex-wrap: wrap; }
+.hero .terms { margin-top: var(--space-md); font-size: var(--text-sm); color: var(--color-muted); }
+
+.letter { position: relative; background: var(--color-sheet); border: 1px solid var(--color-rule); border-radius: var(--radius-card); box-shadow: var(--shadow-sheet); padding: var(--space-xl) var(--space-xl) var(--space-lg); display: grid; grid-template-columns: minmax(0, 1fr) 132px; column-gap: var(--space-lg); }
+.letter header { grid-column: 1 / -1; display: flex; justify-content: space-between; align-items: baseline; padding-bottom: var(--space-md); border-bottom: 2px solid var(--color-navy); margin-bottom: var(--space-sm); }
+.letter header b { font-family: var(--font-display); font-weight: 500; font-size: 1.375rem; color: var(--color-navy); }
+.letter header span { font-size: var(--text-sm); color: var(--color-muted); }
+.letter .row { display: contents; }
+.letter .row > div { padding: var(--space-sm) 0; border-bottom: 1px solid var(--color-rule); }
+.letter .item { display: flex; justify-content: space-between; gap: var(--space-md); }
+.letter .item span:last-child { font-variant-numeric: tabular-nums; }
+.letter .note { font-size: 0.8125rem; color: var(--color-ink-2); border-left: 2px solid var(--color-accent); padding-left: var(--space-sm) !important; line-height: 1.35; }
+.letter .note b { display: block; font-weight: 500; color: var(--color-ink); }
+.letter .note.is-pass { border-left-color: var(--color-rule); color: var(--color-muted); }
+.letter .sum { grid-column: 1 / 2; display: flex; justify-content: space-between; align-items: baseline; padding-top: var(--space-md); }
+.letter .sum small { color: var(--color-muted); font-size: var(--text-sm); }
+.letter .sum strong { font-family: var(--font-display); font-weight: 500; font-size: 2.5rem; color: var(--color-navy); font-variant-numeric: tabular-nums; }
+.stamp { position: absolute; right: -36px; bottom: -48px; width: 118px; height: 118px; border-radius: 50%; border: 2px solid var(--color-accent-deep); outline: 1px solid var(--color-accent-deep); outline-offset: -8px; display: grid; place-content: center; text-align: center; color: var(--color-accent-deep); transform: rotate(-8deg); font-size: 0.75rem; line-height: 1.25; background: color-mix(in oklab, var(--color-accent-soft) 70%, transparent); }
+.stamp b { font-family: var(--font-display); font-size: 1.125rem; font-weight: 500; }
+
+.band { background: var(--color-navy); color: var(--color-on-navy); padding-block: var(--space-3xl); }
+.band .container { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); }
+.band .container > div { padding-inline: var(--space-lg); border-left: 1px solid var(--color-navy-rule); }
+.band .container > div:first-child { border-left: 0; padding-left: 0; }
+.band b { display: block; font-family: var(--font-display); font-weight: 500; font-size: clamp(2.75rem, 4.4vw, 4rem); line-height: 1; font-variant-numeric: tabular-nums; }
+.band span { display: block; margin-top: var(--space-sm); color: var(--color-on-navy-muted); font-size: var(--text-sm); }
+
+.desks { padding-block: var(--space-4xl); }
+.desks .head { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: var(--space-3xl); align-items: end; margin-bottom: var(--space-2xl); }
+.desks h2 { font-size: var(--text-section); color: var(--color-navy); max-width: 14ch; }
+.desks .head p { color: var(--color-ink-2); font-size: var(--text-lead); max-width: 40ch; }
+.desks ol { list-style: none; margin: 0; padding: 0; border-top: 2px solid var(--color-navy); }
+.desks li { display: grid; grid-template-columns: minmax(0, 4fr) minmax(0, 6fr) minmax(0, 2fr); gap: var(--space-xl); align-items: baseline; padding-block: var(--space-xl); border-bottom: 1px solid var(--color-rule); }
+.desks h3 { font-size: 2rem; color: var(--color-navy); }
+.desks li p { color: var(--color-ink-2); font-size: 1.0625rem; }
+.desks .fig { text-align: right; }
+.desks .fig b { display: block; font-family: var(--font-display); font-weight: 500; font-size: 2rem; color: var(--color-navy); }
+.desks .fig span { font-size: var(--text-sm); color: var(--color-muted); }
+.desks li a { color: var(--color-ink); }
+
+@media (max-width: 60rem) {
+  :root { --gutter: 20px; }
+  .nav ul { display: none; }
+  .hero { padding-block: var(--space-2xl) var(--space-3xl); }
+  .hero .container, .desks .head { grid-template-columns: minmax(0, 1fr); gap: var(--space-xl); }
+  .letter { grid-template-columns: minmax(0, 1fr); padding: var(--space-lg); }
+  .letter .note { border-bottom: 0 !important; padding-top: 0 !important; }
+  .stamp { position: static; margin-top: var(--space-md); }
+  .band .container { grid-template-columns: repeat(2, minmax(0, 1fr)); row-gap: var(--space-xl); }
+  .band .container > div:nth-child(3) { border-left: 0; padding-left: 0; }
+  .desks li { grid-template-columns: minmax(0, 1fr); gap: var(--space-sm); }
+  .desks .fig { text-align: left; }
+}
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
+</style>
+</head>
+<body>
+<nav class="nav" aria-label="Main"><div class="container">
+  <a class="wordmark" href="#" aria-label="Adjudo home">adjudo</a>
+  <ul><li><a href="#">Insurers</a></li><li><a href="#">TPAs</a></li><li><a href="#">Hospitals</a></li><li><a href="#">Pricing</a></li><li><a href="#">Security</a></li></ul>
+  <div class="end"><a href="#" class="btn btn--quiet btn--sm">Contact</a><a href="#" class="btn btn--sm">Join the waitlist</a></div>
+</div></nav>
+
+<main>
+<section class="hero"><div class="container">
+  <div>
+    <h1>Every claim decision, cited and signed.</h1>
+    <p class="lead">Adjudo applies the policy to the bill, line by line, with the clause behind every cut.</p>
+    <div class="actions"><a class="btn" href="#">Join the waitlist</a><a class="btn btn--quiet" href="#">Send a sample claim</a></div>
+    <p class="terms">For India’s insurers, TPAs and hospital networks. Paid pilots from 30 days.</p>
+  </div>
+
+  <figure class="letter" aria-label="A sample decision letter">
+    <header><b>Decision on claim 100247</b><span>Apollo Hospitals, Pune</span></header>
+    <div class="row"><div class="item"><span>Room rent, 4 days</span><span class="mono">−₹24,000</span></div><div class="note"><b>§3.2(a)</b>Room capped at ₹8,000 a day</div></div>
+    <div class="row"><div class="item"><span>Pharmacy consumables</span><span class="mono">−₹7,100</span></div><div class="note"><b>§4.1</b>Prorated to eligible room</div></div>
+    <div class="row"><div class="item"><span>Investigations, MRI</span><span class="mono">₹0</span></div><div class="note is-pass"><b>Passed</b>Within diagnostic sub-limit</div></div>
+    <div class="row"><div class="item"><span>Copay, 2%</span><span class="mono">−₹5,000</span></div><div class="note"><b>§2.4</b>On net admissible</div></div>
+    <div class="sum"><small>Approved, of ₹1,48,800 billed</small><strong>₹1,11,700</strong></div>
+    <div class="stamp" aria-label="Signed and sealed"><b>Signed</b>hash-chained<br><span class="mono">7a3f…dc2e</span></div>
+  </figure>
+</div></section>
+
+<section class="band" aria-label="Evaluation results"><div class="container">
+  <div><b>98.94%</b><span>decision accuracy</span></div>
+  <div><b>3,234</b><span>real claims evaluated</span></div>
+  <div><b>8×</b><span>reviewer throughput</span></div>
+  <div><b>8 yr</b><span>signed audit retention</span></div>
+</div></section>
+
+<section class="desks"><div class="container">
+  <div class="head">
+    <h2>One engine for three desks.</h2>
+    <p>The insurer, the TPA and the hospital see the same decision, with the same clauses behind it.</p>
+  </div>
+  <ol>
+    <li><h3>Insurers</h3><p>Cashless pre-auth with the policy wording, NABH tariff and NPPA caps already attached.</p><div class="fig"><b>98.94%</b><span>accuracy</span></div></li>
+    <li><h3>TPAs</h3><p>Officers clear the cashless queue with cited decisions they can defend in sixty minutes.</p><div class="fig"><b>−71%</b><span>pre-auth turnaround</span></div></li>
+    <li><h3>Hospitals</h3><p>See the deductions before the bill leaves your desk, and the counter for each one.</p><div class="fig"><b>↓41%</b><span>disputed lines</span></div></li>
+  </ol>
+</div></section>
+</main>
+</body>
+</html>
