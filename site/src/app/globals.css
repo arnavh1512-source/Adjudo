@@ -7,6 +7,8 @@
 /* Hallmark · dismissed F20 · the lone item on the map's last row is the legend, placed in the empty quadrant on purpose */
 /* Hallmark · dismissed 25 · the map legend is one sentence, a caption, set at 30ch beside the ledger card */
 /* Hallmark · finish-review: subagent · 8 findings · 7 resolved, 1 declined (finding 7b: "Made by hand, signed by machine." is the client's own line, kept as found) · gap: the paperwork idea continues into the map band on the desk ground */
+/* Hallmark · client-requested deviation from coral.md: a warm sunrise mesh (Dribbble reference, chosen by the client) in coral, amber and cream; it lights the paperwork, the inner heroes and the ink band's lower edge, and never sits behind running text */
+/* Hallmark · waive 29 · mesh glows sit behind the stationery and at band edges, text stays on solid paper or ink · the client chose the warm sunrise gradient from Dribbble */
 /* Hallmark · swapped from the draw: pricing has no period switch because Adjudo publishes no prices; it is a three-tier table instead */
 @import "@astryxdesign/core/reset.css";
 @import "@astryxdesign/core/astryx.css";
@@ -28,6 +30,15 @@
   --cast-stock-hover: 14px 14px 26px -10px oklch(var(--shade) / 0.38);
   --cast-stock-press: 2px 2px 4px -2px oklch(var(--shade) / 0.3);
   --color-board-hover: oklch(30% 0.012 40);
+  /* the sunrise: coral, amber and cream, mixed in OKLCH */
+  --sun-coral: oklch(74% 0.155 32);
+  --sun-amber: oklch(84% 0.145 66);
+  --sun-cream: oklch(95% 0.05 82);
+  --sun-rose: oklch(77% 0.12 12);
+  --ember: oklch(60% 0.17 38);
+  --ember-amber: oklch(68% 0.15 60);
+  --sun-glow: oklch(88% 0.1 72);
+  --ember-deep: oklch(38% 0.1 34);
   --bar-h: 68px;
   --banner-h: 40px;
 
@@ -116,3 +127,55 @@ p { max-width: 65ch; }
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { transition-duration: 0.01ms !important; animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; }
 }
+
+/* ---------- the sunrise mesh (client choice) ---------- */
+.btn--ink { background-image: linear-gradient(180deg, color-mix(in oklab, var(--color-board-type) 10%, var(--color-board)), var(--color-board) 70%); }
+.btn--ink:hover { background-image: linear-gradient(180deg, color-mix(in oklab, var(--color-board-type) 16%, var(--color-board)), var(--color-board-hover) 70%); }
+
+/* behind the hero paperwork */
+.paperwork { isolation: isolate; }
+.paperwork::before { content: ""; position: absolute; inset: -14% -12% -14% -8%; z-index: -1; pointer-events: none;
+  background:
+    radial-gradient(34% 40% at 28% 42%, var(--sun-coral), transparent 72%),
+    radial-gradient(38% 44% at 72% 26%, var(--sun-amber), transparent 74%),
+    radial-gradient(40% 38% at 60% 82%, var(--sun-rose), transparent 72%),
+    radial-gradient(70% 70% at 50% 50%, var(--sun-cream), transparent 78%);
+  filter: blur(26px) saturate(1.2); opacity: 1; }
+
+/* inner-page heroes: the sun rising at the right edge, clear of the headline */
+.page-hero { position: relative; overflow: hidden; isolation: isolate; }
+.page-hero::after { content: ""; position: absolute; z-index: -1; pointer-events: none; width: 60%; aspect-ratio: 1.6; right: -14%; top: -30%;
+  background:
+    radial-gradient(45% 50% at 40% 55%, var(--sun-coral), transparent 70%),
+    radial-gradient(50% 55% at 65% 40%, var(--sun-amber), transparent 72%),
+    radial-gradient(55% 50% at 50% 70%, var(--sun-cream), transparent 75%);
+  filter: blur(44px); opacity: 0.95; }
+
+/* the ink bands: an ember horizon along the lower edge */
+section.board { position: relative; overflow: hidden; isolation: isolate; }
+section.board::before { content: ""; position: absolute; z-index: -1; pointer-events: none; left: -10%; right: -10%; bottom: -55%; height: 90%;
+  background:
+    radial-gradient(38% 55% at 25% 50%, var(--ember), transparent 70%),
+    radial-gradient(34% 50% at 55% 45%, var(--ember-amber), transparent 70%),
+    radial-gradient(45% 60% at 80% 55%, var(--ember-deep), transparent 72%);
+  filter: blur(46px); opacity: 0.95; }
+
+/* closing desk bands: a low sun from the right */
+.desk:not(.hero):not(.page-hero) { position: relative; overflow: hidden; isolation: isolate; }
+.desk:not(.hero):not(.page-hero)::after { content: ""; position: absolute; z-index: -1; pointer-events: none; width: 50%; aspect-ratio: 2; right: -12%; bottom: -45%;
+  background: radial-gradient(45% 55% at 45% 50%, var(--sun-coral), transparent 70%), radial-gradient(50% 60% at 65% 45%, var(--sun-amber), transparent 72%);
+  filter: blur(42px); opacity: 0.85; }
+
+@media (max-width: 60rem) {
+  .page-hero::after { width: 110%; right: -40%; top: -45%; opacity: 0.5; }
+  .paperwork::before { inset: -8% -6%; }
+}
+
+/* the grey bands: a warm wash rising from one corner */
+.section--paper2 { position: relative; isolation: isolate; overflow: hidden; }
+.section--paper2::before { content: ""; position: absolute; z-index: -1; pointer-events: none; width: 46%; aspect-ratio: 1.4; left: -14%; top: -28%;
+  background: radial-gradient(45% 50% at 50% 50%, var(--sun-amber), transparent 70%), radial-gradient(40% 45% at 70% 65%, var(--sun-rose), transparent 72%);
+  filter: blur(60px); opacity: 0.45; }
+
+/* the lone figure on the ink band, set in the sunrise's warm cream */
+.evidence__figure { color: var(--sun-glow); }
