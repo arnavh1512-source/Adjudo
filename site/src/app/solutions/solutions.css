@@ -1,0 +1,85 @@
+/* Hallmark · shape: Rows and Split, one template for three audiences, from draw 46c5ab · genre: modern-minimal · theme: Coral (locked in design.md) · redesign: full · job: sign up
+ * hero: Banner · nav: banner over a retracting bar · footer: colophon block · imagery: the product, built as stationery · signature: the audience's own paperwork on the desk (decision letter, officer card, pre-submission sheet)
+ * axes: light/grotesk-sans/warm · posture: restrained · contrast: pass · fold: pass · v2.0.0 */
+/* Hallmark · pre-emit critique: P4 H4 E4 S4 R4 V4 · weakest: S, three pages on one skeleton, so each carries its own paperwork, pain head and workflow lead */
+/* Hallmark · waive 39b · button.t-acc-head is a whole question row at 72px · rows in the Rows composition stand 72 to 120px and the head is the row */
+/* Hallmark · waive 44c · the hero is the shared PageHero (Banner posture, a headline, one sentence and two actions) and the figures row follows it directly · the fold shows headline, lead and action */
+/* Solutions · sol- */
+
+/* ---------- figures: a ruled row ---------- */
+.sol-figures { padding-block: var(--space-xl) var(--space-2xl); border-bottom: 1px solid var(--color-rule); }
+.sol-figs { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); list-style: none; margin: 0; padding: 0; }
+.sol-figs li { display: grid; gap: var(--space-xs); align-content: start; padding: var(--space-md) var(--space-lg); border-left: 1px solid var(--color-rule-2); }
+.sol-figs li:first-child { padding-left: 0; border-left: 0; }
+.sol-figs__value { font: 600 var(--text-display-s)/1 var(--font-display); letter-spacing: -0.04em; overflow-wrap: break-word; min-width: 0; }
+.sol-figs__label { font-size: var(--text-md); color: var(--color-muted); max-width: 20ch; }
+.sol-also { display: flex; flex-wrap: wrap; gap: var(--space-sm) var(--space-xl); list-style: none; margin: var(--space-xl) 0 0; padding: 0; }
+
+/* ---------- pains: head left, rows right ---------- */
+.sol-pains { display: grid; grid-template-columns: minmax(0, 4fr) minmax(0, 8fr); gap: var(--gap-columns); align-items: start; }
+.sol-pains h2, .sol-faq h2 { text-wrap: balance; max-width: 12ch; overflow-wrap: break-word; min-width: 0; }
+.sol-rows { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--color-ink); }
+.sol-rows li { display: grid; grid-template-columns: minmax(0, 2fr) minmax(0, 3fr); gap: var(--space-xl); padding-block: var(--space-lg); border-bottom: 1px solid var(--color-rule-2); }
+.sol-rows h3 { font-size: var(--text-title); line-height: 1.2; }
+.sol-rows p { color: var(--color-ink-2); }
+
+/* ---------- workflow: steps beside stationery ---------- */
+.sol-flow { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: var(--space-3xl); align-items: center; }
+.sol-flow__text h2 { max-width: 12ch; overflow-wrap: break-word; min-width: 0; }
+.sol-flow__text .lead { margin-top: var(--space-md); color: var(--color-ink-2); max-width: 40ch; text-wrap: balance; }
+.sol-steps { list-style: none; counter-reset: sol; margin: var(--space-xl) 0 0; padding: 0; border-top: 1px solid var(--color-ink); }
+.sol-steps li { counter-increment: sol; display: grid; grid-template-columns: var(--space-xl) minmax(0, 1fr); column-gap: var(--space-md); padding-block: var(--space-md); border-bottom: 1px solid var(--color-rule-2); }
+.sol-steps li::before { content: counter(sol); grid-row: 1 / span 2; font: 600 var(--text-xl)/1.1 var(--font-display); letter-spacing: -0.02em; }
+.sol-steps h3 { font: 500 var(--text-lg)/1.25 var(--font-body); letter-spacing: 0; }
+.sol-steps p { margin-top: var(--space-2xs); color: var(--color-ink-2); }
+.sol-flow__visual { margin: 0; }
+.sol-flow__visual figcaption { margin-top: var(--space-md); font-size: var(--text-sm); color: var(--color-muted); }
+
+.sol-stage { position: relative; min-height: 520px; }
+.sol-sheet { position: absolute; padding: var(--space-lg); font-size: var(--text-sm); }
+.sol-sheet--main { left: 4%; top: 0; width: 66%; transform: rotate(-1.5deg); z-index: 1; }
+.sol-sheet--aside { right: 2%; bottom: 0; width: 46%; padding: var(--space-md) var(--space-lg); transform: rotate(1.5deg); z-index: 2; }
+.sol-sheet__title { font: 600 var(--text-lg)/1.1 var(--font-display); letter-spacing: -0.01em; }
+.sol-sheet__meta { margin-top: var(--space-2xs); color: var(--color-muted); }
+.sol-sheet table { width: 100%; margin-top: var(--space-md); border-collapse: collapse; }
+.sol-sheet td, .sol-sheet th { padding: var(--space-xs) 0; border-top: 1px solid var(--color-rule); text-align: left; vertical-align: baseline; }
+.sol-sheet th { font-weight: 500; font-size: var(--text-xs); color: var(--color-muted); border-top: 0; border-bottom: 1px solid var(--color-print); white-space: nowrap; padding-right: var(--space-sm); }
+.sol-sheet td + td { padding-left: var(--space-sm); }
+.sol-sheet td b { font-weight: 500; color: var(--color-muted); margin-left: var(--space-2xs); }
+.sol-sheet__amount { margin-top: var(--space-md); font: 600 var(--text-3xl)/1 var(--font-display); letter-spacing: -0.035em; }
+.sol-sheet__sign { display: flex; justify-content: space-between; align-items: center; gap: var(--space-md); margin-top: var(--space-md); padding-top: var(--space-md); border-top: 1px dashed var(--color-rule-2); color: var(--color-muted); }
+.sol-sheet__tab { font-weight: 600; }
+.sol-sheet__tab--gap { margin-top: var(--space-sm); }
+.sol-sheet__act { display: flex; flex-wrap: wrap; gap: var(--space-sm); margin-top: var(--space-lg); }
+.sol-sheet__act .btn { cursor: default; }
+.sol-sheet__act .btn:active { transform: none; }
+.sol-also a:focus-visible, .sol-rows a:focus-visible { outline: 2px solid var(--color-focus); outline-offset: 2px; }
+.sol-also a:active { text-decoration-color: var(--color-accent-2); }
+.sol-sheet__sum { margin-top: var(--space-md); padding-top: var(--space-sm); border-top: 1px solid var(--color-print); color: var(--color-print); }
+.sol-sheet--clause { transform: rotate(2deg); }
+.sol-sheet--chat { transform: rotate(1deg); }
+.sol-review td:nth-child(3) { white-space: nowrap; font-weight: 500; }
+
+/* ---------- questions ---------- */
+.sol-faq { display: grid; grid-template-columns: minmax(0, 4fr) minmax(0, 8fr); gap: var(--gap-columns); align-items: start; }
+
+/* ---------- the close ---------- */
+.sol-close { padding-block: var(--space-3xl); border-top: 1px solid var(--color-rule); }
+.sol-close__row { display: grid; gap: var(--space-xl); justify-items: start; }
+.sol-close .lead { margin-top: var(--space-md); color: var(--color-ink-2); max-width: 40ch; }
+
+/* ---------- small screens ---------- */
+@media (max-width: 60rem) {
+  .sol-figs { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .sol-figs li { padding-inline: 0 var(--space-md); border-left: 0; border-top: 1px solid var(--color-rule-2); }
+  .sol-figs li:nth-child(-n+2) { border-top: 0; }
+  .sol-figs li:nth-child(even) { padding-left: var(--space-md); border-left: 1px solid var(--color-rule-2); }
+  .sol-pains, .sol-flow, .sol-faq { grid-template-columns: minmax(0, 1fr); gap: var(--space-xl); }
+}
+@media (max-width: 40rem) {
+  .sol-rows li { grid-template-columns: minmax(0, 1fr); gap: var(--space-xs); }
+  .sol-stage { min-height: 0; display: grid; gap: var(--space-md); }
+  .sol-sheet { position: relative; inset: auto; width: auto; }
+  .sol-sheet--main { transform: rotate(-0.6deg); }
+  .sol-sheet--aside { transform: rotate(0.6deg); }
+}

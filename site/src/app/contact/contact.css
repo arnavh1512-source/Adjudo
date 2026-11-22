@@ -1,0 +1,40 @@
+/* Hallmark · shape: Index-First, channels and offices as ruled indexes · genre: modern-minimal · theme: Coral (locked in design.md) · redesign: full · job: sign up
+ * hero: Banner · nav: banner over a retracting bar · footer: colophon block · imagery: the product, built as stationery · signature: the waitlist form as a cotton sheet laid on the desk
+ * axes: light/grotesk-sans/warm · posture: restrained · contrast: pass · fold: pass · v2.0.0 */
+/* Hallmark · pre-emit critique: P4 H4 E4 S4 R5 V4 · weakest: S, a contact page is mostly addresses, so each channel is a ruled row and the form is the one sheet on the page */
+
+
+.con-channels { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: var(--space-3xl); align-items: start; }
+.con-channels h2 { max-width: 9ch; text-wrap: balance; }
+.con-channels__list { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--color-ink); }
+.con-channels__list li { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: var(--space-lg); align-items: start; padding-block: var(--space-lg); border-bottom: 1px solid var(--color-rule-2); }
+.con-channels__list h3 { font-size: var(--text-lg); line-height: 1.25; }
+.con-channels__list p { margin-top: var(--space-xs); color: var(--color-ink-2); }
+.con-channels__list .link:focus-visible { outline: 2px solid var(--color-focus); outline-offset: 2px; }
+.con-channels__list .link:active { opacity: 0.7; }
+.con-channels__list .link { display: inline-flex; align-items: center; min-height: 44px; overflow-wrap: anywhere; }
+
+.con-offices { margin: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--space-xl); border-top: 1px solid var(--color-ink); }
+.con-offices > div { display: grid; gap: var(--space-xs); padding-block: var(--space-lg); }
+.con-offices dt { font: 600 var(--text-2xl)/1.1 var(--font-display); letter-spacing: -0.02em; }
+.con-offices dd { margin: 0; color: var(--color-ink-2); }
+.con-offices .con-offices__region { color: var(--color-muted); font-size: var(--text-sm); }
+
+.con-wait { border-top: 1px solid var(--color-rule); }
+.con-wait__grid { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 6fr); gap: var(--space-3xl); align-items: center; }
+.con-wait__text h2 { max-width: 10ch; }
+.con-wait__text .lead { margin-top: var(--space-lg); color: var(--color-ink-2); max-width: 32ch; }
+.con-wait .waitlist { display: grid; gap: var(--space-lg); padding: var(--space-xl); transform: rotate(0.5deg); }
+.con-wait .waitlist__status { min-height: 1.5em; font-size: var(--text-sm); color: var(--color-ink-2); }
+.con-wait .waitlist__status.is-ok { color: var(--color-ink); font-weight: 500; }
+
+@media (max-width: 60rem) {
+  .con-channels, .con-wait__grid { grid-template-columns: minmax(0, 1fr); gap: var(--space-2xl); }
+  .con-wait .waitlist { transform: none; }
+}
+@media (max-width: 40rem) {
+  .con-channels__list li { grid-template-columns: minmax(0, 1fr); gap: var(--space-xs); }
+  .con-offices { grid-template-columns: minmax(0, 1fr); gap: 0; }
+  .con-offices > div + div { border-top: 1px solid var(--color-rule-2); }
+  .con-wait .waitlist { padding: var(--space-lg); }
+}

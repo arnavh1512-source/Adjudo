@@ -1,0 +1,55 @@
+/* Hallmark · shape: Index-First, rules then a role register · genre: modern-minimal · theme: Coral (locked in design.md) · redesign: full · job: sign up
+ * hero: Banner · nav: banner over a retracting bar · footer: colophon block · imagery: the product, built as stationery · signature: the open roles as one ruled register, each row folding open on the desk
+ * axes: light/grotesk-sans/warm · posture: restrained · contrast: pass · fold: pass · v2.0.0 */
+/* Hallmark · pre-emit critique: P4 H4 E4 S4 R5 V4 · weakest: S, a careers page with no photographs risks reading generic, so the rules are set as ruled rows in the company's own words and the roles are the register itself */
+/* Hallmark · waive 39b · button.t-acc-head is a whole role row at 88px · rows in the Rows composition stand 72 to 120px and the head is the row */
+
+/* ---------- the rules ---------- */
+.car-rules { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: var(--space-3xl); align-items: start; }
+.car-rules__head h2 { max-width: 10ch; text-wrap: balance; }
+.car-rules__head p { margin-top: var(--space-lg); font-size: var(--text-lead); line-height: 1.45; color: var(--color-ink-2); max-width: 36ch; }
+.car-rules__list { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--color-ink); }
+.car-rules__list li { display: grid; grid-template-columns: minmax(0, 2fr) minmax(0, 3fr); gap: var(--space-lg); padding-block: var(--space-lg); border-bottom: 1px solid var(--color-rule-2); }
+.car-rules__list h3 { font-size: var(--text-lg); line-height: 1.25; }
+.car-rules__list p { color: var(--color-ink-2); }
+
+/* ---------- the roles ---------- */
+.car-role__bar { display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: center; gap: var(--space-lg); }
+.car-roles .t-acc-head { min-height: 88px; }
+.car-role__id { display: grid; gap: var(--space-2xs); text-align: left; }
+.car-role__title { font: 500 var(--text-lg)/1.3 var(--font-body); }
+.car-role__meta { display: flex; flex-wrap: wrap; gap: var(--space-2xs) var(--space-lg); font: 400 var(--text-sm)/1.4 var(--font-body); color: var(--color-muted); }
+.car-role__apply { display: inline-flex; align-items: center; min-height: 44px; padding-inline: var(--space-xs); }
+.car-role__apply:focus-visible { outline: 2px solid var(--color-focus); outline-offset: 2px; }
+.car-role__apply:active { transform: translateY(1px); }
+.car-roles .t-acc-head:active { opacity: 0.8; }
+.car-role__body { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: var(--space-2xl); padding-bottom: var(--space-xl); }
+.car-role__about { margin-top: var(--space-lg); color: var(--color-ink-2); }
+
+/* closed panels stay clipped by the grid, but their text is never fully transparent; with scripting off every role is open */
+.car-role .t-acc-panel-inner { opacity: 0.02; }
+.car-role[data-open="true"] .t-acc-panel-inner { opacity: 1; }
+html:not(.js) .car-role .t-acc-panel { grid-template-rows: 1fr; }
+html:not(.js) .car-role .t-acc-panel-inner { opacity: 1; filter: none; }
+.car-role__lists { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: var(--space-xl); }
+.car-role__lists h4 { margin: var(--space-lg) 0 var(--space-xs); font: 500 var(--text-sm)/1.2 var(--font-body); color: var(--color-muted); }
+.car-role__lists ul { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--color-rule-2); }
+.car-role__lists li { padding-block: var(--space-sm); border-bottom: 1px solid var(--color-rule); font-size: var(--text-sm); line-height: 1.5; color: var(--color-ink-2); }
+
+/* ---------- no fit ---------- */
+.car-fit { padding-block: var(--space-3xl); border-top: 1px solid var(--color-rule); }
+.car-fit__row { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: var(--space-xl); align-items: end; }
+.car-fit .btn:focus-visible { outline: 2px solid var(--color-focus); outline-offset: 3px; }
+.car-fit .lead { margin-top: var(--space-md); color: var(--color-ink-2); max-width: 44ch; }
+
+@media (max-width: 60rem) {
+  .car-rules { grid-template-columns: minmax(0, 1fr); gap: var(--space-2xl); }
+  .car-role__body { grid-template-columns: minmax(0, 1fr); gap: var(--space-lg); }
+  .car-fit__row { grid-template-columns: minmax(0, 1fr); justify-items: start; }
+}
+@media (max-width: 40rem) {
+  .car-rules__list li { grid-template-columns: minmax(0, 1fr); gap: var(--space-xs); }
+  .car-role__lists { grid-template-columns: minmax(0, 1fr); gap: var(--space-lg); }
+  .car-role__bar { gap: var(--space-sm); }
+  .car-fit .btn { max-width: 100%; white-space: normal; overflow-wrap: anywhere; }
+}

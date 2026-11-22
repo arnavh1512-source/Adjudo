@@ -1,0 +1,35 @@
+/* Hallmark · shape: Long Document, a sticky contents column beside eleven numbered sections · genre: modern-minimal · theme: Coral (locked in design.md) · redesign: full · job: sign up
+ * hero: Banner · nav: banner over a retracting bar · footer: colophon block · imagery: the product, built as stationery · signature: the policy set as a plain numbered document, contents held beside it
+ * axes: light/grotesk-sans/warm · posture: restrained · contrast: pass · fold: pass · v2.0.0 */
+/* Hallmark · pre-emit critique: P4 H4 E4 S4 R5 V4 · weakest: S, a legal page has no picture to carry it, so measure, leading and a held contents column do the work */
+
+.leg-sec h2 { text-wrap: balance; }
+.leg-body a:focus-visible { outline: 2px solid var(--color-focus); outline-offset: 2px; }
+.leg-toc a:active { opacity: 0.7; }
+.leg-doc { padding-block: var(--space-2xl) var(--section-gap); }
+.leg-doc__grid { display: grid; grid-template-columns: minmax(0, 3fr) minmax(0, 8fr); gap: var(--space-3xl); align-items: start; }
+
+.leg-toc { position: sticky; top: calc(var(--bar-h) + var(--space-lg)); align-self: start; }
+.leg-toc__title { margin-bottom: var(--space-sm); font: 500 var(--text-sm)/1.2 var(--font-body); color: var(--color-muted); }
+.leg-toc ol { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--color-ink); }
+.leg-toc li { border-bottom: 1px solid var(--color-rule); }
+.leg-toc a { display: block; padding-block: var(--space-xs); min-height: 32px; font-size: var(--text-sm); line-height: 1.4; color: var(--color-ink-2); text-decoration: none; }
+.leg-toc a:hover { color: var(--color-ink); text-decoration: underline; text-decoration-color: var(--color-accent-2); text-underline-offset: 0.22em; }
+.leg-toc a:focus-visible { outline: 2px solid var(--color-focus); outline-offset: 2px; }
+
+.leg-body { max-width: 70ch; font-size: var(--text-md); line-height: 1.7; color: var(--color-ink-2); }
+.leg-body p { max-width: none; }
+.leg-intro { display: grid; gap: var(--space-md); padding-bottom: var(--space-xl); font-size: var(--text-lg); line-height: 1.6; color: var(--color-ink); }
+.leg-sec { padding-top: var(--space-xl); margin-top: var(--space-xl); border-top: 1px solid var(--color-rule-2); scroll-margin-top: calc(var(--bar-h) + var(--space-lg)); display: grid; gap: var(--space-md); }
+.leg-sec h2 { font-size: var(--text-xl); line-height: 1.2; max-width: none; color: var(--color-ink); }
+.leg-sec h3 { margin-top: var(--space-xs); font: 500 var(--text-md)/1.4 var(--font-body); letter-spacing: 0; color: var(--color-ink); }
+.leg-sec ul { margin: 0; padding-left: 1.25em; display: grid; gap: var(--space-xs); }
+
+.leg-close { padding-block: var(--space-3xl); border-top: 1px solid var(--color-rule); }
+.leg-close__row { display: grid; grid-template-columns: minmax(0, 3fr) minmax(0, 8fr); gap: var(--space-3xl); align-items: start; }
+.leg-close .lead { color: var(--color-ink-2); max-width: 52ch; overflow-wrap: anywhere; }
+
+@media (max-width: 60rem) {
+  .leg-doc__grid, .leg-close__row { grid-template-columns: minmax(0, 1fr); gap: var(--space-xl); }
+  .leg-toc { position: static; }
+}

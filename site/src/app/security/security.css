@@ -1,0 +1,68 @@
+/* Hallmark · shape: Index-First, controls as a ruled index · genre: modern-minimal · theme: Coral (locked in design.md) · redesign: full · job: sign up
+ * hero: Banner · nav: banner over a retracting bar · footer: colophon block · imagery: the product, built as stationery · signature: the signed audit row chain on one cotton sheet, Signed pressed into the last row
+ * axes: light/grotesk-sans/warm · posture: restrained · contrast: pass · fold: pass · v2.0.0 */
+/* Hallmark · pre-emit critique: P4 H4 E4 S4 R5 V4 · weakest: S, a security page of controls reads like every other one, so the chain is drawn as the real ledger with the real hashes the homepage already shows */
+
+/* ---------- controls ---------- */
+.sec-controls { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: var(--space-3xl); align-items: start; }
+.sec-controls h2 { max-width: 9ch; text-wrap: balance; }
+.sec-controls__list { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--color-ink); }
+.sec-controls__list li { display: grid; grid-template-columns: minmax(0, 2fr) minmax(0, 3fr); gap: var(--space-lg); padding-block: var(--space-lg); border-bottom: 1px solid var(--color-rule-2); }
+.sec-controls__list h3 { font-size: var(--text-lg); line-height: 1.25; }
+.sec-controls__list p { color: var(--color-ink-2); }
+
+/* ---------- the audit chain ---------- */
+.sec-chain-band { border-block: 1px solid var(--color-rule); }
+.sec-chain { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: var(--space-3xl); align-items: center; }
+.sec-chain__text h2 { max-width: 12ch; }
+.sec-chain__text .lead { margin-top: var(--space-lg); color: var(--color-ink-2); max-width: 34ch; }
+.sec-ledger { margin: 0; padding: var(--space-xl); transform: rotate(-0.6deg); }
+.sec-ledger__rows { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--color-print); }
+.sec-ledger__rows li { position: relative; display: grid; grid-template-columns: 5rem minmax(0, 1fr); gap: var(--space-md); align-items: center; padding-block: var(--space-md); border-bottom: 1px solid var(--color-rule); }
+.sec-ledger__n { font-weight: 500; }
+.sec-ledger dl { margin: 0; display: grid; gap: var(--space-xs); }
+.sec-ledger dl > div { display: grid; grid-template-columns: 6rem minmax(0, 1fr); gap: var(--space-sm); align-items: baseline; }
+.sec-ledger dt { font-size: var(--text-sm); color: var(--color-muted); }
+.sec-ledger dd { margin: 0; font-size: var(--text-md); overflow-wrap: anywhere; }
+.sec-ledger__signed { position: absolute; right: var(--space-xs); top: 50%; margin-top: calc(var(--space-md) * -1); }
+.sec-ledger figcaption { margin-top: var(--space-md); padding-top: var(--space-sm); border-top: 1px dashed var(--color-rule-2); font-size: var(--text-sm); color: var(--color-muted); }
+
+/* ---------- tables ---------- */
+.sec-table--posture th[scope="row"] { width: 16%; font-size: var(--text-lg); }
+.sec-table--posture td:nth-child(2) { width: 22%; font-weight: 500; }
+.sec-table--posture td:nth-child(3) { color: var(--color-ink-2); }
+.sec-sub { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: var(--space-3xl); align-items: start; }
+.sec-sub__text h2 { max-width: 11ch; }
+.sec-sub__text .lead { margin-top: var(--space-lg); color: var(--color-ink-2); max-width: 34ch; }
+.sec-table--vendors th[scope="row"] { font-weight: 500; }
+.sec-table--vendors td, .sec-table--vendors tbody th { padding-block: var(--space-lg); }
+.sec-vuln__actions .btn:focus-visible { outline: 2px solid var(--color-focus); outline-offset: 3px; }
+.sec-vuln__actions .btn:active { transform: translateY(1px); }
+
+/* ---------- disclosure ---------- */
+.sec-vuln { display: grid; grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); gap: var(--space-3xl); align-items: start; }
+.sec-vuln__text h2 { max-width: 14ch; }
+.sec-vuln__text .lead { margin-top: var(--space-lg); color: var(--color-ink-2); max-width: 46ch; }
+.sec-vuln__actions { margin-top: var(--space-xl); }
+.sec-vuln__list { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--color-ink); }
+.sec-vuln__list li { padding-block: var(--space-md); border-bottom: 1px solid var(--color-rule-2); }
+
+@media (max-width: 60rem) {
+  .sec-controls, .sec-chain, .sec-sub, .sec-vuln { grid-template-columns: minmax(0, 1fr); gap: var(--space-2xl); }
+  .sec-ledger { transform: none; }
+}
+@media (max-width: 40rem) {
+  .sec-controls__list li { grid-template-columns: minmax(0, 1fr); gap: var(--space-xs); }
+  .sec-ledger { padding: var(--space-lg); }
+  .sec-ledger__rows li { grid-template-columns: minmax(0, 1fr); gap: var(--space-xs); }
+  .sec-ledger dl > div { grid-template-columns: 5.5rem minmax(0, 1fr); }
+  .sec-ledger__signed { top: var(--space-md); margin-top: 0; }
+  /* tables restack as labelled blocks */
+  .sec-table, .sec-table tbody, .sec-table tr, .sec-table th, .sec-table td { display: block; }
+  .sec-table thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); }
+  .sec-table tr { padding-block: var(--space-md); border-bottom: 1px solid var(--color-rule-2); }
+  .sec-table tr:first-child { border-top: 1px solid var(--color-ink); }
+  .sec-table tbody th, .sec-table td { padding: 0 0 var(--space-xs); border: 0; width: auto !important; }
+  .sec-table tbody th { font-size: var(--text-lg) !important; }
+  .sec-table td::before { content: attr(data-label); display: block; font-size: var(--text-sm); font-weight: 400; color: var(--color-muted); }
+}
