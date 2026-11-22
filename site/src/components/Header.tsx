@@ -47,7 +47,7 @@ export function Header() {
       </p>
       <div className="bar">
         <div className="container bar__row">
-          <Link href="/" className="wordmark" aria-label="Adjudo home">adjudo</Link>
+          <Link href="/" className="wordmark" aria-label="AdjudoAI home">adjudoai</Link>
           <nav aria-label="Main" className="bar__nav">
             <ul>
               {mainNav.map((item) =>

@@ -12,7 +12,7 @@ export function Footer() {
   return (
     <footer className="colophon">
       <div className="container colophon__grid">
-        <p className="wordmark wordmark--lg">adjudo</p>
+        <p className="wordmark wordmark--lg">adjudoai</p>
         <div className="colophon__text">
           <p>Adjudo AI builds the audit-grade claims engine for India’s TPAs, insurers and hospitals. Engineering in Pune, ML research in Ahmedabad. Write to <a className="link" href={`mailto:${site.email.hello}`}>{site.email.hello}</a>, or for security matters <a className="link" href={`mailto:${site.email.security}`}>{site.email.security}</a>.</p>
           <nav aria-label="Footer">
